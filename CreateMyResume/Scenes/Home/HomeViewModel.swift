@@ -6,3 +6,15 @@
 //
 
 import Foundation
+
+struct HomeViewModel {
+    let resumes = ["Zoeb Resume", "Saba Resume", "Shane Resume", "John P"]
+    enum Constants {
+        static let cellIdentifier = "HomeTableViewCell"
+        static let addContentsViewControllerIdentifier = "AddContentsViewControllerIdentifier"
+        static let modifyContentsViewControllerIdentifier = "ModifyContentsViewControllerIdentifier"
+    }
+    
+    
+    
+}
