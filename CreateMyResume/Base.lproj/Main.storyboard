@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gey-Qn-Kht">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,11 +13,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ResumeViewController" customModule="CreateMyResume" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vSS-0O-aDh">
-                                <rect key="frame" x="30" y="418.5" width="354" height="59.5"/>
+                                <rect key="frame" x="30" y="294" width="315" height="79.5"/>
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">Create your resume today with just a few taps
@@ -32,14 +32,14 @@ Tap “+” button to continue</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="b3N-zo-y7E">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ResumeTableViewCell" id="s8k-Hn-bIB">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="s8k-Hn-bIB" id="U9x-8H-AlY">
-                                            <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="348" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -74,23 +74,96 @@ Tap “+” button to continue</string>
             </objects>
             <point key="canvasLocation" x="963.76811594202911" y="59.598214285714285"/>
         </scene>
+        <!--About View Controller-->
+        <scene sceneID="ex3-OG-7Bo">
+            <objects>
+                <viewController id="aRo-qN-lO9" customClass="AboutViewController" customModule="CreateMyResume" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lXQ-zH-pRX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m8m-Xx-xmM">
+                                <rect key="frame" x="87.5" y="74" width="200" height="200"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="BwT-gW-Lmz"/>
+                                    <constraint firstAttribute="height" constant="200" id="H5R-Md-oWG"/>
+                                </constraints>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's get started with your name." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2F-PK-ttA">
+                                <rect key="frame" x="30" y="324" width="315" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is your name?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KCi-kv-wb8">
+                                <rect key="frame" x="30" y="378" width="150" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qdw-lc-tf3">
+                                <rect key="frame" x="30" y="423.5" width="315" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4RU-cv-6os">
+                                <rect key="frame" x="30" y="477.5" width="315" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Usually only the first and last name is required, but feel free to include your middle name as part of the first name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F32-1s-qig">
+                                <rect key="frame" x="30" y="541.5" width="315" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zPx-Lz-ZzB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zPx-Lz-ZzB" firstAttribute="trailing" secondItem="c2F-PK-ttA" secondAttribute="trailing" constant="30" id="0f2-bG-eg2"/>
+                            <constraint firstItem="m8m-Xx-xmM" firstAttribute="top" secondItem="zPx-Lz-ZzB" secondAttribute="top" constant="30" id="5W6-X7-tLr"/>
+                            <constraint firstItem="F32-1s-qig" firstAttribute="leading" secondItem="zPx-Lz-ZzB" secondAttribute="leading" constant="30" id="Aeh-0F-7me"/>
+                            <constraint firstItem="zPx-Lz-ZzB" firstAttribute="trailing" secondItem="4RU-cv-6os" secondAttribute="trailing" constant="30" id="BbY-CI-lzy"/>
+                            <constraint firstItem="4RU-cv-6os" firstAttribute="top" secondItem="Qdw-lc-tf3" secondAttribute="bottom" constant="20" id="Dlo-81-3FB"/>
+                            <constraint firstItem="Qdw-lc-tf3" firstAttribute="top" secondItem="KCi-kv-wb8" secondAttribute="bottom" constant="25" id="POe-53-DH7"/>
+                            <constraint firstItem="F32-1s-qig" firstAttribute="top" secondItem="4RU-cv-6os" secondAttribute="bottom" constant="30" id="Qcv-bf-irj"/>
+                            <constraint firstItem="KCi-kv-wb8" firstAttribute="top" secondItem="c2F-PK-ttA" secondAttribute="bottom" constant="30" id="SXe-eP-xap"/>
+                            <constraint firstItem="c2F-PK-ttA" firstAttribute="leading" secondItem="zPx-Lz-ZzB" secondAttribute="leading" constant="30" id="T0W-LL-YjB"/>
+                            <constraint firstItem="c2F-PK-ttA" firstAttribute="top" secondItem="m8m-Xx-xmM" secondAttribute="bottom" constant="50" id="Tzn-q0-8ma"/>
+                            <constraint firstItem="Qdw-lc-tf3" firstAttribute="leading" secondItem="zPx-Lz-ZzB" secondAttribute="leading" constant="30" id="X9i-15-R3T"/>
+                            <constraint firstItem="m8m-Xx-xmM" firstAttribute="centerX" secondItem="lXQ-zH-pRX" secondAttribute="centerX" id="Z73-C2-VHt"/>
+                            <constraint firstItem="zPx-Lz-ZzB" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="F32-1s-qig" secondAttribute="bottom" id="bcr-95-a0X"/>
+                            <constraint firstItem="4RU-cv-6os" firstAttribute="leading" secondItem="zPx-Lz-ZzB" secondAttribute="leading" constant="30" id="eil-E1-er9"/>
+                            <constraint firstItem="KCi-kv-wb8" firstAttribute="leading" secondItem="zPx-Lz-ZzB" secondAttribute="leading" constant="30" id="jAw-W4-F9T"/>
+                            <constraint firstItem="zPx-Lz-ZzB" firstAttribute="trailing" secondItem="F32-1s-qig" secondAttribute="trailing" constant="30" id="opQ-T0-kWf"/>
+                            <constraint firstItem="zPx-Lz-ZzB" firstAttribute="trailing" secondItem="Qdw-lc-tf3" secondAttribute="trailing" constant="30" id="y0C-Cn-STd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="cdY-yw-gFu"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="29h-hA-qxX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1738" y="767"/>
+        </scene>
         <!--Create My Resume-->
         <scene sceneID="7Aw-HQ-a6r">
             <objects>
                 <viewController id="O9X-vB-Eod" customClass="ContentsViewController" customModule="CreateMyResume" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nfc-WR-Cux">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BZp-vP-smc">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ContentsTableViewCell" id="axt-Ty-C86" userLabel="ContentsTableViewCell">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="axt-Ty-C86" id="1k3-hS-mJ0">
-                                            <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="348" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -113,6 +186,7 @@ Tap “+” button to continue</string>
                     <navigationItem key="navigationItem" title="Create My Resume" id="cs2-Hf-skq"/>
                     <connections>
                         <outlet property="tableView" destination="BZp-vP-smc" id="zsU-8q-ZNr"/>
+                        <segue destination="aRo-qN-lO9" kind="show" identifier="AboutViewControllerIdentifier" id="TIA-oB-Aci"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="azP-rP-une" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -125,7 +199,7 @@ Tap “+” button to continue</string>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gey-Qn-Kht" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="0vR-n2-BxX">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -144,6 +218,9 @@ Tap “+” button to continue</string>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
