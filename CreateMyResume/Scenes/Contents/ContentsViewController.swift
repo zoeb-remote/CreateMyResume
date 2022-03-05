@@ -33,10 +33,16 @@ extension ContentsViewController: UITableViewDataSource, UITableViewDelegate {
         //Default Content Configuration
         var content = cell.defaultContentConfiguration()
         content.text = viewModel.records[indexPath.item]
+        let imageName = ContentsViewModel.ContentItem.allCases[indexPath.item].rawValue
+        content.image = UIImage(systemName: imageName)
         
         cell.contentConfiguration = content
         return cell
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let identifier = ContentsViewModel.SegueIdentifier.allCases[indexPath.item].rawValue
+        performSegue(withIdentifier: identifier, sender: self)
+    }
 }

@@ -15,4 +15,24 @@ struct ContentsViewModel {
     let records = ["About", "Contact", "Career Objective", "Work", "Skills", "Education", "Project Details"]
     let cellIdentifier = "ContentsTableViewCell"
     let resume: ResumeModel
+    
+    enum ContentItem: String, CaseIterable {
+        case about = "person.fill"
+        case contact = "envelope.fill"
+        case objective = "star.circle.fill"
+        case work = "case.fill"
+        case skills = "hammer.fill"
+        case education = "graduationcap.fill"
+        case projectDetails = "book.fill"
+    }
+    
+    enum SegueIdentifier: String, CaseIterable {
+        case about = "AboutViewControllerIdentifier"
+        case contact = "ContactViewControllerIdentifier"
+        case objective = "ObjectiveViewControllerIdentifier"
+        case work = "WorkViewControllerIdentifier"
+        case skills = "SkillsViewControllerIdentifier"
+        case education = "EducationViewControllerIdentifier"
+        case projectDetails = "ProjectDetailsViewControllerIdentifier"
+    }
 }
