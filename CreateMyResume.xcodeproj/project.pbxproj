@@ -16,6 +16,21 @@
 		729F990E27D395440033A2D3 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729F990D27D395440033A2D3 /* ContactViewController.swift */; };
 		729F991327D395450033A2D3 /* ContactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729F991227D395450033A2D3 /* ContactViewModel.swift */; };
 		729F991B27D395450033A2D3 /* ContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729F991A27D395450033A2D3 /* ContactModel.swift */; };
+		729F992827D395450033A2D3 /* CareerObjectiveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729F992727D395450033A2D3 /* CareerObjectiveModel.swift */; };
+		729F992D27D395450033A2D3 /* CareerObjectiveViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729F992C27D395450033A2D3 /* CareerObjectiveViewModel.swift */; };
+		729F993227D395450033A2D3 /* CareerObjectiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729F993127D395450033A2D3 /* CareerObjectiveViewController.swift */; };
+		729F993727D395450033A2D3 /* WorkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729F993627D395450033A2D3 /* WorkModel.swift */; };
+		729F993C27D395450033A2D3 /* WorkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729F993B27D395450033A2D3 /* WorkViewModel.swift */; };
+		729F994127D395450033A2D3 /* WorkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729F994027D395450033A2D3 /* WorkViewController.swift */; };
+		729F994627D395450033A2D3 /* SkillsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729F994527D395450033A2D3 /* SkillsModel.swift */; };
+		729F994B27D395450033A2D3 /* SkillsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729F994A27D395450033A2D3 /* SkillsViewModel.swift */; };
+		729F995027D395450033A2D3 /* SkillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729F994F27D395450033A2D3 /* SkillsViewController.swift */; };
+		729F995527D395450033A2D3 /* EducationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729F995427D395450033A2D3 /* EducationModel.swift */; };
+		729F995A27D395450033A2D3 /* EducationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729F995927D395450033A2D3 /* EducationViewModel.swift */; };
+		729F995F27D395450033A2D3 /* EducationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729F995E27D395450033A2D3 /* EducationViewController.swift */; };
+		729F996527D395450033A2D3 /* ProjectDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729F996427D395450033A2D3 /* ProjectDetailsModel.swift */; };
+		729F996A27D395450033A2D3 /* ProjectDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729F996927D395450033A2D3 /* ProjectDetailsViewModel.swift */; };
+		729F996F27D395450033A2D3 /* ProjectDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729F996E27D395450033A2D3 /* ProjectDetailsViewController.swift */; };
 		72EEC7FA27D32B6900F686E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72EEC7F927D32B6900F686E5 /* AppDelegate.swift */; };
 		72EEC7FC27D32B6900F686E5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72EEC7FB27D32B6900F686E5 /* SceneDelegate.swift */; };
 		72EEC80127D32B6900F686E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72EEC7FF27D32B6900F686E5 /* Main.storyboard */; };
@@ -58,6 +73,21 @@
 		729F990D27D395440033A2D3 /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		729F991227D395450033A2D3 /* ContactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewModel.swift; sourceTree = "<group>"; };
 		729F991A27D395450033A2D3 /* ContactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactModel.swift; sourceTree = "<group>"; };
+		729F992727D395450033A2D3 /* CareerObjectiveModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerObjectiveModel.swift; sourceTree = "<group>"; };
+		729F992C27D395450033A2D3 /* CareerObjectiveViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerObjectiveViewModel.swift; sourceTree = "<group>"; };
+		729F993127D395450033A2D3 /* CareerObjectiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerObjectiveViewController.swift; sourceTree = "<group>"; };
+		729F993627D395450033A2D3 /* WorkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkModel.swift; sourceTree = "<group>"; };
+		729F993B27D395450033A2D3 /* WorkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkViewModel.swift; sourceTree = "<group>"; };
+		729F994027D395450033A2D3 /* WorkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkViewController.swift; sourceTree = "<group>"; };
+		729F994527D395450033A2D3 /* SkillsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsModel.swift; sourceTree = "<group>"; };
+		729F994A27D395450033A2D3 /* SkillsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsViewModel.swift; sourceTree = "<group>"; };
+		729F994F27D395450033A2D3 /* SkillsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsViewController.swift; sourceTree = "<group>"; };
+		729F995427D395450033A2D3 /* EducationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationModel.swift; sourceTree = "<group>"; };
+		729F995927D395450033A2D3 /* EducationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationViewModel.swift; sourceTree = "<group>"; };
+		729F995E27D395450033A2D3 /* EducationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationViewController.swift; sourceTree = "<group>"; };
+		729F996427D395450033A2D3 /* ProjectDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailsModel.swift; sourceTree = "<group>"; };
+		729F996927D395450033A2D3 /* ProjectDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailsViewModel.swift; sourceTree = "<group>"; };
+		729F996E27D395450033A2D3 /* ProjectDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailsViewController.swift; sourceTree = "<group>"; };
 		72EEC7F627D32B6900F686E5 /* CreateMyResume.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CreateMyResume.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72EEC7F927D32B6900F686E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72EEC7FB27D32B6900F686E5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +154,56 @@
 			path = Contact;
 			sourceTree = "<group>";
 		};
+		729F992227D395450033A2D3 /* CareerObjective */ = {
+			isa = PBXGroup;
+			children = (
+				729F992727D395450033A2D3 /* CareerObjectiveModel.swift */,
+				729F992C27D395450033A2D3 /* CareerObjectiveViewModel.swift */,
+				729F993127D395450033A2D3 /* CareerObjectiveViewController.swift */,
+			);
+			path = CareerObjective;
+			sourceTree = "<group>";
+		};
+		729F992327D395450033A2D3 /* Work */ = {
+			isa = PBXGroup;
+			children = (
+				729F993627D395450033A2D3 /* WorkModel.swift */,
+				729F993B27D395450033A2D3 /* WorkViewModel.swift */,
+				729F994027D395450033A2D3 /* WorkViewController.swift */,
+			);
+			path = Work;
+			sourceTree = "<group>";
+		};
+		729F992427D395450033A2D3 /* Skills */ = {
+			isa = PBXGroup;
+			children = (
+				729F994527D395450033A2D3 /* SkillsModel.swift */,
+				729F994A27D395450033A2D3 /* SkillsViewModel.swift */,
+				729F994F27D395450033A2D3 /* SkillsViewController.swift */,
+			);
+			path = Skills;
+			sourceTree = "<group>";
+		};
+		729F992527D395450033A2D3 /* Education */ = {
+			isa = PBXGroup;
+			children = (
+				729F995427D395450033A2D3 /* EducationModel.swift */,
+				729F995927D395450033A2D3 /* EducationViewModel.swift */,
+				729F995E27D395450033A2D3 /* EducationViewController.swift */,
+			);
+			path = Education;
+			sourceTree = "<group>";
+		};
+		729F992627D395450033A2D3 /* ProjectDetails */ = {
+			isa = PBXGroup;
+			children = (
+				729F996427D395450033A2D3 /* ProjectDetailsModel.swift */,
+				729F996927D395450033A2D3 /* ProjectDetailsViewModel.swift */,
+				729F996E27D395450033A2D3 /* ProjectDetailsViewController.swift */,
+			);
+			path = ProjectDetails;
+			sourceTree = "<group>";
+		};
 		72EEC7ED27D32B6800F686E5 = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +264,11 @@
 				72EEC85827D33E1E00F686E5 /* Contents */,
 				729F98F027D3751D0033A2D3 /* About */,
 				729F990C27D3951D0033A2D3 /* Contact */,
+				729F992227D395450033A2D3 /* CareerObjective */,
+				729F992327D395450033A2D3 /* Work */,
+				729F992427D395450033A2D3 /* Skills */,
+				729F992527D395450033A2D3 /* Education */,
+				729F992627D395450033A2D3 /* ProjectDetails */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -349,20 +434,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				729F990727D381120033A2D3 /* ImagePicker.swift in Sources */,
+				729F994B27D395450033A2D3 /* SkillsViewModel.swift in Sources */,
+				729F994127D395450033A2D3 /* WorkViewController.swift in Sources */,
 				72EEC7FA27D32B6900F686E5 /* AppDelegate.swift in Sources */,
 				72EEC85127D3376E00F686E5 /* ResumeModel.swift in Sources */,
 				729F98F727D375610033A2D3 /* AboutViewModel.swift in Sources */,
 				729F98FC27D375770033A2D3 /* AboutModel.swift in Sources */,
+				729F995527D395450033A2D3 /* EducationModel.swift in Sources */,
+				729F993C27D395450033A2D3 /* WorkViewModel.swift in Sources */,
+				729F995027D395450033A2D3 /* SkillsViewController.swift in Sources */,
+				729F994627D395450033A2D3 /* SkillsModel.swift in Sources */,
 				729F991B27D395450033A2D3 /* ContactModel.swift in Sources */,
 				729F990827D381120033A2D3 /* ImageStore.swift in Sources */,
 				72EEC85C27D33E7200F686E5 /* ContentsViewController.swift in Sources */,
 				729F98F227D375470033A2D3 /* AboutViewController.swift in Sources */,
+				729F995A27D395450033A2D3 /* EducationViewModel.swift in Sources */,
+				729F992D27D395450033A2D3 /* CareerObjectiveViewModel.swift in Sources */,
 				729F990627D381120033A2D3 /* UIViewExtension.swift in Sources */,
 				729F991327D395450033A2D3 /* ContactViewModel.swift in Sources */,
 				72EEC7FC27D32B6900F686E5 /* SceneDelegate.swift in Sources */,
 				72EEC85D27D33E7200F686E5 /* ContentsViewModel.swift in Sources */,
+				729F993727D395450033A2D3 /* WorkModel.swift in Sources */,
+				729F993227D395450033A2D3 /* CareerObjectiveViewController.swift in Sources */,
 				72EEC85E27D33E7200F686E5 /* ContentsModel.swift in Sources */,
+				729F996527D395450033A2D3 /* ProjectDetailsModel.swift in Sources */,
 				72EEC84C27D3375200F686E5 /* ResumeViewModel.swift in Sources */,
+				729F996A27D395450033A2D3 /* ProjectDetailsViewModel.swift in Sources */,
+				729F995F27D395450033A2D3 /* EducationViewController.swift in Sources */,
+				729F992827D395450033A2D3 /* CareerObjectiveModel.swift in Sources */,
+				729F996F27D395450033A2D3 /* ProjectDetailsViewController.swift in Sources */,
 				72EEC84727D334C900F686E5 /* ResumeViewController.swift in Sources */,
 				729F990E27D395440033A2D3 /* ContactViewController.swift in Sources */,
 			);

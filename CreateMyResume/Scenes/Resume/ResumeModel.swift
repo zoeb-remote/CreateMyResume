@@ -31,67 +31,6 @@ class ResumeModel: Codable {
     }
 }
 
-class CareerObjectiveContentModel: Codable {
-    var objective: String
-    
-    init() {
-        self.objective = ""
-    }
-}
-
-class WorkContentModel: Codable {
-    var totalExperience: String
-    var workSummary: String
-    var companyName: String
-    var duration: String
-    
-    init() {
-        self.totalExperience = ""
-        self.workSummary = ""
-        self.companyName = ""
-        self.duration = ""
-    }
-    
-}
-
-class SkillContentModel: Codable {
-    var skill: String
-    
-    init() {
-        self.skill = ""
-    }
-    
-}
-
-class EducationContentModel: Codable {
-    var classDetails: String
-    var year: Int
-    var percentage: Double
-    
-    init() {
-        self.classDetails = ""
-        self.year = 0
-        self.percentage = 0
-    }
-    
-}
-
-class ProjectDetailsContentModel: Codable {
-    var projectName: String
-    var teamSize: Int
-    var summary: String
-    var technologyUsed: String
-    var role: String
-    
-    init() {
-        self.projectName = ""
-        self.teamSize = 0
-        self.summary = ""
-        self.technologyUsed = ""
-        self.role = ""
-    }
-}
-
 extension ResumeModel {
     static func readResumes(for email: String? = nil) -> [ResumeModel]? {
         //array of resume model [resume model]
