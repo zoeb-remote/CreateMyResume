@@ -35,12 +35,12 @@ class AboutViewController: UIViewController {
         imagePicker = ImagePicker(presentationController: self, delegate: self)
     }
     
-    @IBAction func addPhotoButtonTapped(_ sender: UITapGestureRecognizer) {
+    @IBAction func addPhotoButtonTapped(_ sender: UIButton) {
         
         self.imagePicker.present(from: userImageButton)
     }
     
-    @IBAction func nextButtonTapped(_ sender: UITapGestureRecognizer) {
+    @IBAction func nextButtonTapped(_ sender: UIButton) {
         viewModel.contentModel.firstName = firstNameTextField.text ?? ""
         viewModel.contentModel.lastName = lastNameTextField.text ?? ""
         delegate?.performNext(identifier: ContentsViewModel.SegueIdentifier.contact.rawValue)

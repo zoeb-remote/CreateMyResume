@@ -24,7 +24,7 @@ class AddWorkViewController: UIViewController {
 
     }
     
-    @IBAction func saveButtonTapped(_ sender: UITapGestureRecognizer) {
+    @IBAction func saveButtonTapped(_ sender: UIButton) {
         viewModel.contentModel.companyName = companyTextField.text ?? ""
         viewModel.contentModel.duration = durationTextField.text ?? ""
         viewModel.contentModel.isCurrentCompany = isCurrentCompanySwitch.isOn

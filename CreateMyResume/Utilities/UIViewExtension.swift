@@ -38,4 +38,10 @@ import UIKit
             return layer.cornerRadius
         }
     }
+    
+    /** Loads instance from nib with the same name. */
+    func loadNib() -> UIView {
+        let nibName = type(of: self).description().components(separatedBy: ".").last!
+        return Bundle.main.loadNibNamed(nibName, owner: self, options: nil)?.first as! UIView
+    }
 }

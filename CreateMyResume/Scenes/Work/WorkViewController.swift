@@ -10,8 +10,9 @@ import UIKit
 class WorkViewController: UIViewController {
     
     @IBOutlet weak var totalExperienceTextField: UITextField!
-    @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var addButton: UIButton!
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableViewHeightLC: NSLayoutConstraint!
     
     weak var delegate: NextActionProtocol?
     
@@ -22,6 +23,7 @@ class WorkViewController: UIViewController {
         super.viewDidLoad()
         
         totalExperienceTextField.text = viewModel.contentModel.totalExperience
+        refresh()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -30,22 +32,51 @@ class WorkViewController: UIViewController {
         }
     }
     
-    @IBAction func nextButtonTapped(_ sender: UITapGestureRecognizer) {
+    private func refresh() {
+        tableViewHeightLC.constant = viewModel.tableViewHeight
+        self.view.layoutIfNeeded()
+        self.tableView.reloadData()
+    }
+    
+    @IBAction func nextButtonTapped(_ sender: UIButton) {
         viewModel.contentModel.totalExperience = totalExperienceTextField.text ?? ""
         delegate?.performNext(identifier: ContentsViewModel.SegueIdentifier.skills.rawValue)
     }
     
 }
 
-private extension WorkViewController {
-    func refreshWorkList() {
+extension WorkViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        let count = self.viewModel.contentModel.workModels.count
+        tableView.isHidden = count == 0
+        return count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: WorkViewModel.Constants.cellIdentifier, for: indexPath) as? CompanyDetailsTableViewCell else {
+            return UITableViewCell()
+        }
         
+        let model = self.viewModel.contentModel.workModels[indexPath.item]
+        cell.companyNameLabel.text = model.companyName
+        cell.durationLabel.text = model.duration
+        cell.companyIndex = indexPath.item
+        cell.delegate = self
+        
+        return cell
     }
 }
 
 extension WorkViewController: AddWorkViewControllerProtocol {
     func didAddWork(model: AddWorkViewModel) {
         self.viewModel.contentModel.workModels.append(model.contentModel)
-        refreshWorkList() 
+        refresh()
+    }
+}
+
+extension WorkViewController: CompanyDetailsViewProtocol {
+    func didRemoveCompany(companyIndex: Int) {
+        self.viewModel.contentModel.workModels.remove(at: companyIndex)
+        refresh()
     }
 }

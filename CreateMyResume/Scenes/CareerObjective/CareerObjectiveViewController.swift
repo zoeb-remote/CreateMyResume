@@ -22,7 +22,7 @@ class CareerObjectiveViewController: UIViewController {
         careerObjectiveTextView.text = viewModel.contentModel.objective
     }
     
-    @IBAction func nextButtonTapped(_ sender: UITapGestureRecognizer) {
+    @IBAction func nextButtonTapped(_ sender: UIButton) {
         viewModel.contentModel.objective = careerObjectiveTextView.text ?? ""
         delegate?.performNext(identifier: ContentsViewModel.SegueIdentifier.work.rawValue)
     }
