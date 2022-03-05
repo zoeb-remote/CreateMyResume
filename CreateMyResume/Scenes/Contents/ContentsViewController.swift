@@ -22,6 +22,9 @@ class ContentsViewController: UIViewController {
         if let vc = segue.destination as? AboutViewController {
             vc.inputModel = AboutInputModel(contentModel: viewModel.resume.about)
             vc.delegate = self
+        } else if let vc = segue.destination as? ContactViewController {
+            vc.inputModel = ContactInputModel(contentModel: viewModel.resume.contact)
+            vc.delegate = self
         }
     }
 

@@ -18,7 +18,6 @@ class AboutViewController: UIViewController {
     @IBOutlet weak var lastNameTextField: UITextField!
     
     weak var delegate: NextActionProtocol?
-    var photoStored: UIImage?
     var imagePicker: ImagePicker!
     
     var inputModel: AboutInputModel!
@@ -50,7 +49,6 @@ class AboutViewController: UIViewController {
 extension AboutViewController: ImagePickerDelegate {
     func didSelect(image: UIImage?) {
         if let image = image {
-            photoStored = image
             userImageButton.setImage(image, for: .normal)
             let name = UUID().uuidString
             debugPrint("UUID: " + name)

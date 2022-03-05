@@ -31,33 +31,8 @@ class ResumeModel: Codable {
     }
 }
 
-class AboutContentModel: Codable {
-    var firstName: String
-    var lastName: String
-    var picture: String
-    
-    init() {
-        self.firstName = ""
-        self.lastName = ""
-        self.picture = ""
-    }
-}
-
-class ContactContentModel: Codable {
-    let mobile: String
-    let email: String
-    let address: String
-    
-    init() {
-        self.mobile = ""
-        self.email = ""
-        self.address = ""
-    }
-    
-}
-
 class CareerObjectiveContentModel: Codable {
-    let objective: String
+    var objective: String
     
     init() {
         self.objective = ""
@@ -65,10 +40,10 @@ class CareerObjectiveContentModel: Codable {
 }
 
 class WorkContentModel: Codable {
-    let totalExperience: String
-    let workSummary: String
-    let companyName: String
-    let duration: String
+    var totalExperience: String
+    var workSummary: String
+    var companyName: String
+    var duration: String
     
     init() {
         self.totalExperience = ""
@@ -80,7 +55,7 @@ class WorkContentModel: Codable {
 }
 
 class SkillContentModel: Codable {
-    let skill: String
+    var skill: String
     
     init() {
         self.skill = ""
@@ -89,9 +64,9 @@ class SkillContentModel: Codable {
 }
 
 class EducationContentModel: Codable {
-    let classDetails: String
-    let year: Int
-    let percentage: Double
+    var classDetails: String
+    var year: Int
+    var percentage: Double
     
     init() {
         self.classDetails = ""
@@ -102,11 +77,11 @@ class EducationContentModel: Codable {
 }
 
 class ProjectDetailsContentModel: Codable {
-    let projectName: String
-    let teamSize: Int
-    let summary: String
-    let technologyUsed: String
-    let role: String
+    var projectName: String
+    var teamSize: Int
+    var summary: String
+    var technologyUsed: String
+    var role: String
     
     init() {
         self.projectName = ""

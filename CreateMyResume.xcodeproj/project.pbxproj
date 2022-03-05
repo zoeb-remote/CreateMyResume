@@ -14,6 +14,8 @@
 		729F990727D381120033A2D3 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729F990427D381120033A2D3 /* ImagePicker.swift */; };
 		729F990827D381120033A2D3 /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729F990527D381120033A2D3 /* ImageStore.swift */; };
 		729F990E27D395440033A2D3 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729F990D27D395440033A2D3 /* ContactViewController.swift */; };
+		729F991327D395450033A2D3 /* ContactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729F991227D395450033A2D3 /* ContactViewModel.swift */; };
+		729F991B27D395450033A2D3 /* ContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729F991A27D395450033A2D3 /* ContactModel.swift */; };
 		72EEC7FA27D32B6900F686E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72EEC7F927D32B6900F686E5 /* AppDelegate.swift */; };
 		72EEC7FC27D32B6900F686E5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72EEC7FB27D32B6900F686E5 /* SceneDelegate.swift */; };
 		72EEC80127D32B6900F686E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72EEC7FF27D32B6900F686E5 /* Main.storyboard */; };
@@ -54,6 +56,8 @@
 		729F990427D381120033A2D3 /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		729F990527D381120033A2D3 /* ImageStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
 		729F990D27D395440033A2D3 /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
+		729F991227D395450033A2D3 /* ContactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewModel.swift; sourceTree = "<group>"; };
+		729F991A27D395450033A2D3 /* ContactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactModel.swift; sourceTree = "<group>"; };
 		72EEC7F627D32B6900F686E5 /* CreateMyResume.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CreateMyResume.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72EEC7F927D32B6900F686E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72EEC7FB27D32B6900F686E5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +117,8 @@
 		729F990C27D3951D0033A2D3 /* Contact */ = {
 			isa = PBXGroup;
 			children = (
+				729F991A27D395450033A2D3 /* ContactModel.swift */,
+				729F991227D395450033A2D3 /* ContactViewModel.swift */,
 				729F990D27D395440033A2D3 /* ContactViewController.swift */,
 			);
 			path = Contact;
@@ -347,10 +353,12 @@
 				72EEC85127D3376E00F686E5 /* ResumeModel.swift in Sources */,
 				729F98F727D375610033A2D3 /* AboutViewModel.swift in Sources */,
 				729F98FC27D375770033A2D3 /* AboutModel.swift in Sources */,
+				729F991B27D395450033A2D3 /* ContactModel.swift in Sources */,
 				729F990827D381120033A2D3 /* ImageStore.swift in Sources */,
 				72EEC85C27D33E7200F686E5 /* ContentsViewController.swift in Sources */,
 				729F98F227D375470033A2D3 /* AboutViewController.swift in Sources */,
 				729F990627D381120033A2D3 /* UIViewExtension.swift in Sources */,
+				729F991327D395450033A2D3 /* ContactViewModel.swift in Sources */,
 				72EEC7FC27D32B6900F686E5 /* SceneDelegate.swift in Sources */,
 				72EEC85D27D33E7200F686E5 /* ContentsViewModel.swift in Sources */,
 				72EEC85E27D33E7200F686E5 /* ContentsModel.swift in Sources */,

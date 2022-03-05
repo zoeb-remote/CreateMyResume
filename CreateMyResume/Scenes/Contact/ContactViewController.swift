@@ -8,22 +8,29 @@
 import UIKit
 
 class ContactViewController: UIViewController {
+    
+    @IBOutlet weak var phoneTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var addressTextField: UITextField!
+    
+    weak var delegate: NextActionProtocol?
+    
+    var inputModel: ContactInputModel!
+    private lazy var viewModel = ContactViewModel(contentModel: inputModel.contentModel)
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        phoneTextField.text = viewModel.contentModel.mobile
+        emailTextField.text = viewModel.contentModel.email
+        addressTextField.text = viewModel.contentModel.address
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func nextButtonTapped(_ sender: UITapGestureRecognizer) {
+        viewModel.contentModel.mobile = phoneTextField.text ?? ""
+        viewModel.contentModel.email = emailTextField.text ?? ""
+        viewModel.contentModel.address = addressTextField.text ?? ""
+        delegate?.performNext(identifier: ContentsViewModel.SegueIdentifier.contact.rawValue)
     }
-    */
 
 }
