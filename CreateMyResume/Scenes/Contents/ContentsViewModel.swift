@@ -19,7 +19,7 @@ class ContentsViewModel {
     enum ContentItem: String, CaseIterable {
         case about = "person.fill"
         case contact = "envelope.fill"
-        case objective = "star.circle.fill"
+        case careerObjective = "star.circle.fill"
         case work = "case.fill"
         case skills = "hammer.fill"
         case education = "graduationcap.fill"
@@ -29,7 +29,7 @@ class ContentsViewModel {
     enum SegueIdentifier: String, CaseIterable {
         case about = "AboutViewControllerIdentifier"
         case contact = "ContactViewControllerIdentifier"
-        case objective = "ObjectiveViewControllerIdentifier"
+        case careerObjective = "CareerObjectiveViewControllerIdentifier"
         case work = "WorkViewControllerIdentifier"
         case skills = "SkillsViewControllerIdentifier"
         case education = "EducationViewControllerIdentifier"

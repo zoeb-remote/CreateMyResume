@@ -335,6 +335,7 @@ Tap “+” button to continue</string>
                         <outlet property="tableView" destination="BZp-vP-smc" id="zsU-8q-ZNr"/>
                         <segue destination="aRo-qN-lO9" kind="show" identifier="AboutViewControllerIdentifier" id="TIA-oB-Aci"/>
                         <segue destination="Asa-ce-n3S" kind="show" identifier="ContactViewControllerIdentifier" id="KIs-QF-cGg"/>
+                        <segue destination="pyG-CX-iAg" kind="show" identifier="CareerObjectiveViewControllerIdentifier" id="WmW-b2-vP1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="azP-rP-une" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -359,11 +360,117 @@ Tap “+” button to continue</string>
             </objects>
             <point key="canvasLocation" x="-20" y="60"/>
         </scene>
+        <!--Career Objective-->
+        <scene sceneID="dxI-R8-VYp">
+            <objects>
+                <viewController id="pyG-CX-iAg" customClass="CareerObjectiveViewController" customModule="CreateMyResume" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="91N-MR-XFw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add your Career Objective" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GeZ-gS-ArF">
+                                <rect key="frame" x="30" y="94" width="315" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What do I want to do? and Where do I want to be?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vko-VU-Fuy">
+                                <rect key="frame" x="30" y="148" width="315" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZFj-Nu-5w1">
+                                <rect key="frame" x="30" y="365.5" width="315" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="NFQ-el-fJe"/>
+                                </constraints>
+                                <string key="text">Your career objective is a personal statement defining
+the specifics you wish to attain via professional work.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egg-N8-ViR">
+                                <rect key="frame" x="50" y="449.5" width="275" height="40"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="iXc-Sd-S1r"/>
+                                </constraints>
+                                <state key="normal" title="Next"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.99416571860000003" green="0.80472117659999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="nextButtonTapped:" destination="pyG-CX-iAg" eventType="touchUpInside" id="gNR-5X-XCB"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kWq-ku-3Uv">
+                                <rect key="frame" x="30" y="214" width="315" height="121.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="1" green="0.87014429640000002" blue="0.034418221810000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="S1Z-P7-ZQ6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kWq-ku-3Uv" firstAttribute="leading" secondItem="S1Z-P7-ZQ6" secondAttribute="leading" constant="30" id="3gL-Cc-bjK"/>
+                            <constraint firstItem="GeZ-gS-ArF" firstAttribute="top" secondItem="S1Z-P7-ZQ6" secondAttribute="top" constant="50" id="7r4-ut-e10"/>
+                            <constraint firstItem="S1Z-P7-ZQ6" firstAttribute="trailing" secondItem="egg-N8-ViR" secondAttribute="trailing" constant="50" id="Bc6-ar-aar"/>
+                            <constraint firstItem="ZFj-Nu-5w1" firstAttribute="centerX" secondItem="91N-MR-XFw" secondAttribute="centerX" id="Fp5-s6-lcH"/>
+                            <constraint firstItem="S1Z-P7-ZQ6" firstAttribute="trailing" secondItem="ZFj-Nu-5w1" secondAttribute="trailing" constant="30" id="L7Q-a3-4nG"/>
+                            <constraint firstAttribute="trailing" secondItem="Vko-VU-Fuy" secondAttribute="trailing" constant="30" id="OHS-d2-POu"/>
+                            <constraint firstItem="S1Z-P7-ZQ6" firstAttribute="trailing" secondItem="kWq-ku-3Uv" secondAttribute="trailing" constant="30" id="XCd-kw-3Ta"/>
+                            <constraint firstItem="Vko-VU-Fuy" firstAttribute="leading" secondItem="S1Z-P7-ZQ6" secondAttribute="leading" constant="30" id="bpm-HS-pWc"/>
+                            <constraint firstItem="egg-N8-ViR" firstAttribute="top" secondItem="ZFj-Nu-5w1" secondAttribute="bottom" constant="30" id="fET-pm-Fsu"/>
+                            <constraint firstItem="kWq-ku-3Uv" firstAttribute="top" secondItem="Vko-VU-Fuy" secondAttribute="bottom" constant="25" id="fHb-cp-gPR"/>
+                            <constraint firstItem="ZFj-Nu-5w1" firstAttribute="leading" secondItem="S1Z-P7-ZQ6" secondAttribute="leading" constant="30" id="jfJ-UY-0DA"/>
+                            <constraint firstItem="S1Z-P7-ZQ6" firstAttribute="bottom" secondItem="egg-N8-ViR" secondAttribute="bottom" constant="177.5" id="mbv-Jl-jsb"/>
+                            <constraint firstItem="ZFj-Nu-5w1" firstAttribute="top" secondItem="kWq-ku-3Uv" secondAttribute="bottom" constant="30" id="nHq-lr-VlL"/>
+                            <constraint firstItem="egg-N8-ViR" firstAttribute="leading" secondItem="S1Z-P7-ZQ6" secondAttribute="leading" constant="50" id="pYv-8x-oMC"/>
+                            <constraint firstItem="Vko-VU-Fuy" firstAttribute="top" secondItem="GeZ-gS-ArF" secondAttribute="bottom" constant="30" id="ubu-5P-DU3"/>
+                            <constraint firstItem="GeZ-gS-ArF" firstAttribute="leading" secondItem="S1Z-P7-ZQ6" secondAttribute="leading" constant="30" id="y6R-2d-YMa"/>
+                            <constraint firstItem="S1Z-P7-ZQ6" firstAttribute="trailing" secondItem="GeZ-gS-ArF" secondAttribute="trailing" constant="30" id="zuz-iB-Lah"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Career Objective" id="46k-ct-6bu"/>
+                    <connections>
+                        <outlet property="careerObjectiveTextView" destination="kWq-ku-3Uv" id="1i5-BC-BJb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Jv-z1-3Zq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3346" y="808"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="r1F-Ji-z80"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

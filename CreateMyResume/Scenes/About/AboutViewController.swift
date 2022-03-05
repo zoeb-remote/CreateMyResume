@@ -26,9 +26,11 @@ class AboutViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        firstNameTextField.text = viewModel.contentModel.firstName
-        lastNameTextField.text = viewModel.contentModel.lastName
-        userImageButton.setImage(viewModel.userImage, for: .normal)
+        DispatchQueue.main.async {
+            self.firstNameTextField.text = self.viewModel.contentModel.firstName
+            self.lastNameTextField.text = self.viewModel.contentModel.lastName
+            self.userImageButton.setImage(self.viewModel.userImage, for: .normal)
+        }
         
         imagePicker = ImagePicker(presentationController: self, delegate: self)
     }

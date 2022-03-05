@@ -30,7 +30,7 @@ class ContactViewController: UIViewController {
         viewModel.contentModel.mobile = phoneTextField.text ?? ""
         viewModel.contentModel.email = emailTextField.text ?? ""
         viewModel.contentModel.address = addressTextField.text ?? ""
-        delegate?.performNext(identifier: ContentsViewModel.SegueIdentifier.contact.rawValue)
+        delegate?.performNext(identifier: ContentsViewModel.SegueIdentifier.careerObjective.rawValue)
     }
 
 }
