@@ -15,6 +15,9 @@
 		72EEC80627D32B6C00F686E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72EEC80427D32B6C00F686E5 /* LaunchScreen.storyboard */; };
 		72EEC81127D32B6D00F686E5 /* CreateMyResumeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72EEC81027D32B6D00F686E5 /* CreateMyResumeTests.swift */; };
 		72EEC81C27D32B6D00F686E5 /* CreateMyResumeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72EEC81B27D32B6D00F686E5 /* CreateMyResumeUITests.swift */; };
+		72EEC84727D334C900F686E5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72EEC84627D334C900F686E5 /* HomeViewController.swift */; };
+		72EEC84C27D3375200F686E5 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72EEC84B27D3375200F686E5 /* HomeViewModel.swift */; };
+		72EEC85127D3376E00F686E5 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72EEC85027D3376E00F686E5 /* HomeModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		72EEC81727D32B6D00F686E5 /* CreateMyResumeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CreateMyResumeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		72EEC81B27D32B6D00F686E5 /* CreateMyResumeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMyResumeUITests.swift; sourceTree = "<group>"; };
 		72EEC81D27D32B6D00F686E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72EEC84627D334C900F686E5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		72EEC84B27D3375200F686E5 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		72EEC85027D3376E00F686E5 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +107,9 @@
 			children = (
 				72EEC7F927D32B6900F686E5 /* AppDelegate.swift */,
 				72EEC7FB27D32B6900F686E5 /* SceneDelegate.swift */,
+				72EEC82F27D32BF100F686E5 /* Scenes */,
 				72EEC7FD27D32B6900F686E5 /* ViewController.swift */,
+				72EEC83127D32C2D00F686E5 /* Utilities */,
 				72EEC7FF27D32B6900F686E5 /* Main.storyboard */,
 				72EEC80227D32B6C00F686E5 /* Assets.xcassets */,
 				72EEC80427D32B6C00F686E5 /* LaunchScreen.storyboard */,
@@ -126,6 +134,31 @@
 				72EEC81D27D32B6D00F686E5 /* Info.plist */,
 			);
 			path = CreateMyResumeUITests;
+			sourceTree = "<group>";
+		};
+		72EEC82F27D32BF100F686E5 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				72EEC83027D32BFE00F686E5 /* Home */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		72EEC83027D32BFE00F686E5 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				72EEC85027D3376E00F686E5 /* HomeModel.swift */,
+				72EEC84B27D3375200F686E5 /* HomeViewModel.swift */,
+				72EEC84627D334C900F686E5 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		72EEC83127D32C2D00F686E5 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,7 +293,10 @@
 			files = (
 				72EEC7FE27D32B6900F686E5 /* ViewController.swift in Sources */,
 				72EEC7FA27D32B6900F686E5 /* AppDelegate.swift in Sources */,
+				72EEC85127D3376E00F686E5 /* HomeModel.swift in Sources */,
 				72EEC7FC27D32B6900F686E5 /* SceneDelegate.swift in Sources */,
+				72EEC84C27D3375200F686E5 /* HomeViewModel.swift in Sources */,
+				72EEC84727D334C900F686E5 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
