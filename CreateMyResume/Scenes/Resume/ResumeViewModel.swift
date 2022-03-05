@@ -8,7 +8,12 @@
 import Foundation
 
 struct ResumeViewModel {
-    let resumes = ["Zoeb Resume", "Saba Resume", "Shane Resume", "John P"]
+    var resumes: [ResumeModel]? {
+        return ResumeModel.readResumes()
+    }
+    var resumesCount: Int {
+        resumes?.count ?? 0
+    }
     enum Constants {
         static let cellIdentifier = "ResumeTableViewCell"
         static let addContentsViewControllerIdentifier = "AddContentsViewControllerIdentifier"

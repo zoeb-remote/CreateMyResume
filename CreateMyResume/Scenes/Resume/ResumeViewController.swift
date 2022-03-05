@@ -20,13 +20,19 @@ class ResumeViewController: UIViewController {
         navigationItem.rightBarButtonItem = addBarButton
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.isHidden = viewModel.resumesCount == 0
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? ContentsViewController {
             if ResumeViewModel.Constants.addContentsViewControllerIdentifier == segue.identifier {
-               //TODO: delete this if not needed
+                vc.inputModel = ContentsInputModel(resume: ResumeModel())
             } else if ResumeViewModel.Constants.modifyContentsViewControllerIdentifier == segue.identifier {
-                let title = viewModel.resumes[selectedIndexPath.item]
-                vc.title = title
+                guard let resume = viewModel.resumes?[selectedIndexPath.item] else { return }
+                vc.title = resume.title
+                vc.inputModel = ContentsInputModel(resume: resume)
             }
         }
     }
@@ -41,7 +47,7 @@ class ResumeViewController: UIViewController {
 
 extension ResumeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        viewModel.resumes.count
+        return viewModel.resumesCount
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -49,7 +55,7 @@ extension ResumeViewController: UITableViewDataSource, UITableViewDelegate {
         
         //Default Content Configuration
         var content = cell.defaultContentConfiguration()
-        content.text = viewModel.resumes[indexPath.item]
+        content.text = viewModel.resumes?[indexPath.item].title
         
         cell.contentConfiguration = content
         return cell

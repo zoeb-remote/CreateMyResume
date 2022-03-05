@@ -11,7 +11,8 @@ class ContentsViewController: UIViewController {
     
     @IBOutlet private weak var tableView: UITableView!
     
-    private lazy var viewModel = ContentsViewModel()
+    var inputModel: ContentsInputModel!
+    private lazy var viewModel = ContentsViewModel(resume: inputModel.resume)
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -17,12 +17,30 @@ struct ResumeModel: Codable {
     let skills: [SkillContentModel]
     let educationDetails: [EducationContentModel]
     let projectDetails: [ProjectDetailsContentModel]
+    
+    init() {
+        self.resumeId = ""
+        self.title = ""
+        self.about = AboutContentModel()
+        self.contact = ContactContentModel()
+        self.careerObjective = CareerObjectiveContentModel()
+        self.workSummary = [WorkContentModel]()
+        self.skills = [SkillContentModel]()
+        self.educationDetails = [EducationContentModel]()
+        self.projectDetails = [ProjectDetailsContentModel]()
+    }
 }
 
 struct AboutContentModel: Codable {
     let firstName: String
     let lastName: String
     let picture: String
+    
+    init() {
+        self.firstName = ""
+        self.lastName = ""
+        self.picture = ""
+    }
 }
 
 struct ContactContentModel: Codable {
@@ -30,10 +48,20 @@ struct ContactContentModel: Codable {
     let email: String
     let address: String
     
+    init() {
+        self.mobile = ""
+        self.email = ""
+        self.address = ""
+    }
+    
 }
 
 struct CareerObjectiveContentModel: Codable {
     let objective: String
+    
+    init() {
+        self.objective = ""
+    }
 }
 
 struct WorkContentModel: Codable {
@@ -42,10 +70,21 @@ struct WorkContentModel: Codable {
     let companyName: String
     let duration: String
     
+    init() {
+        self.totalExperience = ""
+        self.workSummary = ""
+        self.companyName = ""
+        self.duration = ""
+    }
+    
 }
 
 struct SkillContentModel: Codable {
     let skill: String
+    
+    init() {
+        self.skill = ""
+    }
     
 }
 
@@ -53,6 +92,12 @@ struct EducationContentModel: Codable {
     let classDetails: String
     let year: Int
     let percentage: Double
+    
+    init() {
+        self.classDetails = ""
+        self.year = 0
+        self.percentage = 0
+    }
     
 }
 
@@ -62,6 +107,14 @@ struct ProjectDetailsContentModel: Codable {
     let summary: String
     let technologyUsed: String
     let role: String
+    
+    init() {
+        self.projectName = ""
+        self.teamSize = 0
+        self.summary = ""
+        self.technologyUsed = ""
+        self.role = ""
+    }
 }
 
 extension ResumeModel {
