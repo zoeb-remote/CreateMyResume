@@ -9,15 +9,11 @@ import Foundation
 
 class WorkContentModel: Codable {
     var totalExperience: String
-    var workSummary: String
-    var companyName: String
-    var duration: String
+    var workModels: [AddWorkModel]
     
     init() {
         self.totalExperience = ""
-        self.workSummary = ""
-        self.companyName = ""
-        self.duration = ""
+        self.workModels = [AddWorkModel]()
     }
     
 }

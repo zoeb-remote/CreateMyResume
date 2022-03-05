@@ -28,6 +28,9 @@ class ContentsViewController: UIViewController {
         } else if let vc = segue.destination as? CareerObjectiveViewController {
             vc.inputModel = CareerObjectiveInputModel(contentModel: viewModel.resume.careerObjective)
             vc.delegate = self
+        } else if let vc = segue.destination as? WorkViewController {
+            vc.inputModel = WorkInputModel(contentModel: viewModel.resume.workSummary)
+            vc.delegate = self
         }
     }
 

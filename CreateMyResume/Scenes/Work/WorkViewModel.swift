@@ -6,3 +6,15 @@
 //
 
 import Foundation
+
+struct WorkInputModel {
+    let contentModel: WorkContentModel
+}
+
+class WorkViewModel {
+    var contentModel: WorkContentModel
+    
+    init(contentModel: WorkContentModel) {
+        self.contentModel = contentModel
+    }
+}
