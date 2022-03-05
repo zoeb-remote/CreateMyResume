@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ResumeViewModel {
+class ResumeViewModel {
     var resumes: [ResumeModel]? {
         return ResumeModel.readResumes()
     }

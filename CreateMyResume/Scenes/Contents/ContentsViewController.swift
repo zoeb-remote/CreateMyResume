@@ -17,6 +17,13 @@ class ContentsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? AboutViewController {
+            vc.inputModel = AboutInputModel(contentModel: viewModel.resume.about)
+            vc.delegate = self
+        }
+    }
 
 }
 
@@ -45,4 +52,15 @@ extension ContentsViewController: UITableViewDataSource, UITableViewDelegate {
         let identifier = ContentsViewModel.SegueIdentifier.allCases[indexPath.item].rawValue
         performSegue(withIdentifier: identifier, sender: self)
     }
+}
+
+//MARK: - NextActionProtocol
+
+extension ContentsViewController: NextActionProtocol {
+    func performNext(identifier: String) {
+        self.navigationController?.popViewController(animated: false)
+        performSegue(withIdentifier: identifier, sender: self)
+    }
+    
+    
 }

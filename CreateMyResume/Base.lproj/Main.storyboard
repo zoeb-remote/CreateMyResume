@@ -74,7 +74,7 @@ Tap “+” button to continue</string>
             </objects>
             <point key="canvasLocation" x="963.76811594202911" y="59.598214285714285"/>
         </scene>
-        <!--About View Controller-->
+        <!--About-->
         <scene sceneID="ex3-OG-7Bo">
             <objects>
                 <viewController id="aRo-qN-lO9" customClass="AboutViewController" customModule="CreateMyResume" customModuleProvider="target" sceneMemberID="viewController">
@@ -82,13 +82,27 @@ Tap “+” button to continue</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m8m-Xx-xmM">
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m8m-Xx-xmM">
                                 <rect key="frame" x="87.5" y="74" width="200" height="200"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="BwT-gW-Lmz"/>
                                     <constraint firstAttribute="height" constant="200" id="H5R-Md-oWG"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="100"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.99416571860000003" green="0.80472117659999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="addPhotoButtonTapped:" destination="aRo-qN-lO9" eventType="touchUpInside" id="b5K-7F-8QF"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's get started with your name." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2F-PK-ttA">
                                 <rect key="frame" x="30" y="324" width="315" height="24"/>
@@ -118,6 +132,28 @@ Tap “+” button to continue</string>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Hs-d6-9aQ">
+                                <rect key="frame" x="50" y="625.5" width="275" height="40"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="yLJ-VK-CLt"/>
+                                </constraints>
+                                <state key="normal" title="Next"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.99416571860000003" green="0.80472117659999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="nextButtonTapped:" destination="aRo-qN-lO9" eventType="touchUpInside" id="ac2-PW-VFf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zPx-Lz-ZzB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -129,23 +165,49 @@ Tap “+” button to continue</string>
                             <constraint firstItem="4RU-cv-6os" firstAttribute="top" secondItem="Qdw-lc-tf3" secondAttribute="bottom" constant="20" id="Dlo-81-3FB"/>
                             <constraint firstItem="Qdw-lc-tf3" firstAttribute="top" secondItem="KCi-kv-wb8" secondAttribute="bottom" constant="25" id="POe-53-DH7"/>
                             <constraint firstItem="F32-1s-qig" firstAttribute="top" secondItem="4RU-cv-6os" secondAttribute="bottom" constant="30" id="Qcv-bf-irj"/>
+                            <constraint firstItem="0Hs-d6-9aQ" firstAttribute="top" secondItem="F32-1s-qig" secondAttribute="bottom" constant="30" id="Qle-pb-oQ8"/>
                             <constraint firstItem="KCi-kv-wb8" firstAttribute="top" secondItem="c2F-PK-ttA" secondAttribute="bottom" constant="30" id="SXe-eP-xap"/>
                             <constraint firstItem="c2F-PK-ttA" firstAttribute="leading" secondItem="zPx-Lz-ZzB" secondAttribute="leading" constant="30" id="T0W-LL-YjB"/>
                             <constraint firstItem="c2F-PK-ttA" firstAttribute="top" secondItem="m8m-Xx-xmM" secondAttribute="bottom" constant="50" id="Tzn-q0-8ma"/>
                             <constraint firstItem="Qdw-lc-tf3" firstAttribute="leading" secondItem="zPx-Lz-ZzB" secondAttribute="leading" constant="30" id="X9i-15-R3T"/>
+                            <constraint firstItem="zPx-Lz-ZzB" firstAttribute="trailing" secondItem="0Hs-d6-9aQ" secondAttribute="trailing" constant="50" id="XC5-Jv-6mX"/>
                             <constraint firstItem="m8m-Xx-xmM" firstAttribute="centerX" secondItem="lXQ-zH-pRX" secondAttribute="centerX" id="Z73-C2-VHt"/>
                             <constraint firstItem="zPx-Lz-ZzB" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="F32-1s-qig" secondAttribute="bottom" id="bcr-95-a0X"/>
                             <constraint firstItem="4RU-cv-6os" firstAttribute="leading" secondItem="zPx-Lz-ZzB" secondAttribute="leading" constant="30" id="eil-E1-er9"/>
+                            <constraint firstItem="0Hs-d6-9aQ" firstAttribute="centerX" secondItem="lXQ-zH-pRX" secondAttribute="centerX" id="fwg-V4-gFN"/>
                             <constraint firstItem="KCi-kv-wb8" firstAttribute="leading" secondItem="zPx-Lz-ZzB" secondAttribute="leading" constant="30" id="jAw-W4-F9T"/>
                             <constraint firstItem="zPx-Lz-ZzB" firstAttribute="trailing" secondItem="F32-1s-qig" secondAttribute="trailing" constant="30" id="opQ-T0-kWf"/>
+                            <constraint firstItem="0Hs-d6-9aQ" firstAttribute="leading" secondItem="zPx-Lz-ZzB" secondAttribute="leading" constant="50" id="wGe-NN-UQl"/>
                             <constraint firstItem="zPx-Lz-ZzB" firstAttribute="trailing" secondItem="Qdw-lc-tf3" secondAttribute="trailing" constant="30" id="y0C-Cn-STd"/>
+                            <constraint firstItem="zPx-Lz-ZzB" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="KCi-kv-wb8" secondAttribute="trailing" symbolic="YES" id="zIj-Pr-cVu"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="cdY-yw-gFu"/>
+                    <navigationItem key="navigationItem" title="About" id="cdY-yw-gFu"/>
+                    <connections>
+                        <outlet property="firstNameTextField" destination="Qdw-lc-tf3" id="fha-WZ-XdW"/>
+                        <outlet property="lastNameTextField" destination="4RU-cv-6os" id="KbW-hX-ZEZ"/>
+                        <outlet property="userImageButton" destination="m8m-Xx-xmM" id="V1Z-RH-FLH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="29h-hA-qxX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1738" y="767"/>
+            <point key="canvasLocation" x="1738" y="809"/>
+        </scene>
+        <!--Contact-->
+        <scene sceneID="Ccb-BZ-pjy">
+            <objects>
+                <viewController id="Asa-ce-n3S" customClass="ContactViewController" customModule="CreateMyResume" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dVK-aI-Z1K">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="V6m-KM-h7u"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Contact" id="7Ai-cS-q7M"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C1r-tz-Hce" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2524" y="808"/>
         </scene>
         <!--Create My Resume-->
         <scene sceneID="7Aw-HQ-a6r">
@@ -187,11 +249,12 @@ Tap “+” button to continue</string>
                     <connections>
                         <outlet property="tableView" destination="BZp-vP-smc" id="zsU-8q-ZNr"/>
                         <segue destination="aRo-qN-lO9" kind="show" identifier="AboutViewControllerIdentifier" id="TIA-oB-Aci"/>
+                        <segue destination="Asa-ce-n3S" kind="show" identifier="ContactViewControllerIdentifier" id="KIs-QF-cGg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="azP-rP-une" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1739" y="60"/>
+            <point key="canvasLocation" x="1737" y="59"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qsX-sX-Za3">

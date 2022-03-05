@@ -11,7 +11,7 @@ struct ContentsInputModel {
     let resume: ResumeModel
 }
 
-struct ContentsViewModel {
+class ContentsViewModel {
     let records = ["About", "Contact", "Career Objective", "Work", "Skills", "Education", "Project Details"]
     let cellIdentifier = "ContentsTableViewCell"
     let resume: ResumeModel
@@ -34,5 +34,9 @@ struct ContentsViewModel {
         case skills = "SkillsViewControllerIdentifier"
         case education = "EducationViewControllerIdentifier"
         case projectDetails = "ProjectDetailsViewControllerIdentifier"
+    }
+    
+    init(resume: ResumeModel) {
+        self.resume = resume
     }
 }

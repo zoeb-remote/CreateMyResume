@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ResumeModel: Codable {
+class ResumeModel: Codable {
     let resumeId: String
     let title: String
     let about: AboutContentModel
@@ -31,10 +31,10 @@ struct ResumeModel: Codable {
     }
 }
 
-struct AboutContentModel: Codable {
-    let firstName: String
-    let lastName: String
-    let picture: String
+class AboutContentModel: Codable {
+    var firstName: String
+    var lastName: String
+    var picture: String
     
     init() {
         self.firstName = ""
@@ -43,7 +43,7 @@ struct AboutContentModel: Codable {
     }
 }
 
-struct ContactContentModel: Codable {
+class ContactContentModel: Codable {
     let mobile: String
     let email: String
     let address: String
@@ -56,7 +56,7 @@ struct ContactContentModel: Codable {
     
 }
 
-struct CareerObjectiveContentModel: Codable {
+class CareerObjectiveContentModel: Codable {
     let objective: String
     
     init() {
@@ -64,7 +64,7 @@ struct CareerObjectiveContentModel: Codable {
     }
 }
 
-struct WorkContentModel: Codable {
+class WorkContentModel: Codable {
     let totalExperience: String
     let workSummary: String
     let companyName: String
@@ -79,7 +79,7 @@ struct WorkContentModel: Codable {
     
 }
 
-struct SkillContentModel: Codable {
+class SkillContentModel: Codable {
     let skill: String
     
     init() {
@@ -88,7 +88,7 @@ struct SkillContentModel: Codable {
     
 }
 
-struct EducationContentModel: Codable {
+class EducationContentModel: Codable {
     let classDetails: String
     let year: Int
     let percentage: Double
@@ -101,7 +101,7 @@ struct EducationContentModel: Codable {
     
 }
 
-struct ProjectDetailsContentModel: Codable {
+class ProjectDetailsContentModel: Codable {
     let projectName: String
     let teamSize: Int
     let summary: String
