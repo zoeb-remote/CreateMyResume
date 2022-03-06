@@ -63,22 +63,27 @@ extension ResumeModel {
     }
     
     func writeResume() {
-        if self.title.isEmpty {
-            self.title = self.about.firstName + " " + self.about.lastName
-        }
+        self.title = self.about.firstName + " " + self.about.lastName
         
         var resumes = ResumeModel.readResumes() ?? [ResumeModel]()
         if resumes.isEmpty {
             resumes.append(self)
         } else {
             var resumeList = [ResumeModel]()
+            var isExisting = false
             for existingResume in resumes {
                 if existingResume.resumeId == self.resumeId {
                     //Replace by new resume
                     resumeList.append(self)
+                    isExisting = true
                 } else {
                     resumeList.append(existingResume)
                 }
+            }
+            
+            // Save new resume
+            if isExisting == false {
+                resumeList.append(self)
             }
             
             resumes = resumeList
