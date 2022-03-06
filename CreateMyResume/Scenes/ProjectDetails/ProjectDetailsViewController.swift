@@ -36,7 +36,7 @@ class ProjectDetailsViewController: UIViewController {
     }
     
     @IBAction func nextButtonTapped(_ sender: UIButton) {
-        delegate?.performNext(identifier: ContentsViewModel.SegueIdentifier.projectDetails.rawValue)
+        delegate?.performNext(identifier: ContentsViewModel.SegueIdentifier.pdfPreview.rawValue)
     }
     
 }

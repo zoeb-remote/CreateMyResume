@@ -1,16 +1,20 @@
 PODS:
   - IQKeyboardManagerSwift (6.5.9)
+  - PDFGenerator (3.1.0)
 
 DEPENDENCIES:
   - IQKeyboardManagerSwift
+  - PDFGenerator (~> 3.1)
 
 SPEC REPOS:
   trunk:
     - IQKeyboardManagerSwift
+    - PDFGenerator
 
 SPEC CHECKSUMS:
   IQKeyboardManagerSwift: 6e839c575c4aa1078d58a596e41244e77abe918f
+  PDFGenerator: 17d6bc525db0a3fcd156fbf00f9d1b8d5cc75d1e
 
-PODFILE CHECKSUM: 005ad4f39028b904289108abc610361290e70ac9
+PODFILE CHECKSUM: 7883752559ea0ddda4ad6d3872f088c5688ba3db
 
 COCOAPODS: 1.11.2

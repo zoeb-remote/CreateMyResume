@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,9 @@
 		7224F43327D4AA5800A6728B /* AddProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7224F42E27D4AA5700A6728B /* AddProjectViewController.swift */; };
 		7224F43427D4AA5800A6728B /* AddProjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7224F42F27D4AA5700A6728B /* AddProjectViewModel.swift */; };
 		7224F43527D4AA5800A6728B /* ProjectDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7224F43127D4AA5700A6728B /* ProjectDetailsTableViewCell.swift */; };
+		7224F45527D4D54100A6728B /* PDFResumeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7224F45427D4D54100A6728B /* PDFResumeViewController.swift */; };
+		7224F45A27D4D6EC00A6728B /* PDFPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7224F45927D4D6EC00A6728B /* PDFPreviewViewController.swift */; };
+		7224F45F27D4EB4200A6728B /* PDFResumeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7224F45E27D4EB4200A6728B /* PDFResumeViewModel.swift */; };
 		728E2BBE27D39E6C00CD00BE /* AddWorkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728E2BBD27D39E6C00CD00BE /* AddWorkViewController.swift */; };
 		728E2BC327D39E8300CD00BE /* AddWorkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728E2BC227D39E8300CD00BE /* AddWorkViewModel.swift */; };
 		728E2BC827D39FFC00CD00BE /* AddWorkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728E2BC727D39FFC00CD00BE /* AddWorkModel.swift */; };
@@ -93,6 +96,9 @@
 		7224F42E27D4AA5700A6728B /* AddProjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddProjectViewController.swift; sourceTree = "<group>"; };
 		7224F42F27D4AA5700A6728B /* AddProjectViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddProjectViewModel.swift; sourceTree = "<group>"; };
 		7224F43127D4AA5700A6728B /* ProjectDetailsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectDetailsTableViewCell.swift; sourceTree = "<group>"; };
+		7224F45427D4D54100A6728B /* PDFResumeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFResumeViewController.swift; sourceTree = "<group>"; };
+		7224F45927D4D6EC00A6728B /* PDFPreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDFPreviewViewController.swift; sourceTree = "<group>"; };
+		7224F45E27D4EB4200A6728B /* PDFResumeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFResumeViewModel.swift; sourceTree = "<group>"; };
 		728E2BBD27D39E6C00CD00BE /* AddWorkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkViewController.swift; sourceTree = "<group>"; };
 		728E2BC227D39E8300CD00BE /* AddWorkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkViewModel.swift; sourceTree = "<group>"; };
 		728E2BC727D39FFC00CD00BE /* AddWorkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkModel.swift; sourceTree = "<group>"; };
@@ -187,7 +193,6 @@
 				ECAC5F0582D98C94F33352A6 /* Pods-CreateMyResumeTests.debug.xcconfig */,
 				846B60F2FA22AF958DCB741E /* Pods-CreateMyResumeTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -233,6 +238,16 @@
 				7224F43127D4AA5700A6728B /* ProjectDetailsTableViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		7224F45027D4D50600A6728B /* PDF */ = {
+			isa = PBXGroup;
+			children = (
+				7224F45E27D4EB4200A6728B /* PDFResumeViewModel.swift */,
+				7224F45427D4D54100A6728B /* PDFResumeViewController.swift */,
+				7224F45927D4D6EC00A6728B /* PDFPreviewViewController.swift */,
+			);
+			path = PDF;
 			sourceTree = "<group>";
 		};
 		728E2BBC27D39E5800CD00BE /* AddWork */ = {
@@ -397,6 +412,7 @@
 				729F992427D395450033A2D3 /* Skills */,
 				729F992527D395450033A2D3 /* Education */,
 				729F992627D395450033A2D3 /* ProjectDetails */,
+				7224F45027D4D50600A6728B /* PDF */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -709,10 +725,12 @@
 				72EEC85D27D33E7200F686E5 /* ContentsViewModel.swift in Sources */,
 				729F993727D395450033A2D3 /* WorkModel.swift in Sources */,
 				729F993227D395450033A2D3 /* CareerObjectiveViewController.swift in Sources */,
+				7224F45527D4D54100A6728B /* PDFResumeViewController.swift in Sources */,
 				72EEC85E27D33E7200F686E5 /* ContentsModel.swift in Sources */,
 				729F996527D395450033A2D3 /* ProjectDetailsModel.swift in Sources */,
 				72EEC84C27D3375200F686E5 /* ResumeViewModel.swift in Sources */,
 				728E2BD127D3AB2400CD00BE /* CompanyDetailsTableViewCell.swift in Sources */,
+				7224F45A27D4D6EC00A6728B /* PDFPreviewViewController.swift in Sources */,
 				7224F40327D49C7700A6728B /* EducationDetailsTableViewCell.swift in Sources */,
 				729F996A27D395450033A2D3 /* ProjectDetailsViewModel.swift in Sources */,
 				729F995F27D395450033A2D3 /* EducationViewController.swift in Sources */,
@@ -724,6 +742,7 @@
 				728E2BC327D39E8300CD00BE /* AddWorkViewModel.swift in Sources */,
 				729F990E27D395440033A2D3 /* ContactViewController.swift in Sources */,
 				728E2BBE27D39E6C00CD00BE /* AddWorkViewController.swift in Sources */,
+				7224F45F27D4EB4200A6728B /* PDFResumeViewModel.swift in Sources */,
 				7224F41527D49CAD00A6728B /* AddEducationModel.swift in Sources */,
 				7224F3FC27D491D700A6728B /* SkillsTableViewCell.swift in Sources */,
 			);

@@ -12,7 +12,7 @@ struct ContentsInputModel {
 }
 
 class ContentsViewModel {
-    let records = ["About", "Contact", "Career Objective", "Work", "Skills", "Education", "Project Details"]
+    let records = ["About", "Contact", "Career Objective", "Work", "Skills", "Education", "Project Details", "Preview & Export"]
     let cellIdentifier = "ContentsTableViewCell"
     let resume: ResumeModel
     
@@ -24,6 +24,7 @@ class ContentsViewModel {
         case skills = "hammer.fill"
         case education = "graduationcap.fill"
         case projectDetails = "book.fill"
+        case pdfPreview = "checkmark.seal.fill"
     }
     
     enum SegueIdentifier: String, CaseIterable {
@@ -34,6 +35,7 @@ class ContentsViewModel {
         case skills = "SkillsViewControllerIdentifier"
         case education = "EducationViewControllerIdentifier"
         case projectDetails = "ProjectDetailsViewControllerIdentifier"
+        case pdfPreview = "PDFResumeViewControllerIdentifier"
     }
     
     init(resume: ResumeModel) {

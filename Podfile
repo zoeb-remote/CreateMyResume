@@ -7,6 +7,7 @@ target 'CreateMyResume' do
 
   # Pods for CreateMyResume
   pod 'IQKeyboardManagerSwift'
+  pod 'PDFGenerator', '~> 3.1'
 
   target 'CreateMyResumeTests' do
     inherit! :search_paths

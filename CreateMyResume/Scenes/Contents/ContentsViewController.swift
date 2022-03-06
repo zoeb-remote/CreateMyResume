@@ -40,6 +40,8 @@ class ContentsViewController: UIViewController {
         } else if let vc = segue.destination as? ProjectDetailsViewController {
             vc.inputModel = ProjectDetailsInputModel(contentModel: viewModel.resume.projectDetails)
             vc.delegate = self
+        } else if let vc = segue.destination as? PDFResumeViewController {
+            vc.inputModel = PDFResumeInputModel(resumeModel: viewModel.resume)
         }
     }
 
