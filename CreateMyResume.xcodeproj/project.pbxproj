@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7224F3FC27D491D700A6728B /* SkillsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7224F3FB27D491D700A6728B /* SkillsTableViewCell.swift */; };
 		728E2BBE27D39E6C00CD00BE /* AddWorkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728E2BBD27D39E6C00CD00BE /* AddWorkViewController.swift */; };
 		728E2BC327D39E8300CD00BE /* AddWorkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728E2BC227D39E8300CD00BE /* AddWorkViewModel.swift */; };
 		728E2BC827D39FFC00CD00BE /* AddWorkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728E2BC727D39FFC00CD00BE /* AddWorkModel.swift */; };
@@ -69,6 +70,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7224F3FB27D491D700A6728B /* SkillsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsTableViewCell.swift; sourceTree = "<group>"; };
 		728E2BBD27D39E6C00CD00BE /* AddWorkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkViewController.swift; sourceTree = "<group>"; };
 		728E2BC227D39E8300CD00BE /* AddWorkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkViewModel.swift; sourceTree = "<group>"; };
 		728E2BC727D39FFC00CD00BE /* AddWorkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkModel.swift; sourceTree = "<group>"; };
@@ -144,6 +146,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7224F3F727D491B200A6728B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				7224F3FB27D491D700A6728B /* SkillsTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		728E2BBC27D39E5800CD00BE /* AddWork */ = {
 			isa = PBXGroup;
 			children = (
@@ -210,6 +220,7 @@
 				729F994527D395450033A2D3 /* SkillsModel.swift */,
 				729F994A27D395450033A2D3 /* SkillsViewModel.swift */,
 				729F994F27D395450033A2D3 /* SkillsViewController.swift */,
+				7224F3F727D491B200A6728B /* Cell */,
 			);
 			path = Skills;
 			sourceTree = "<group>";
@@ -501,6 +512,7 @@
 				728E2BC327D39E8300CD00BE /* AddWorkViewModel.swift in Sources */,
 				729F990E27D395440033A2D3 /* ContactViewController.swift in Sources */,
 				728E2BBE27D39E6C00CD00BE /* AddWorkViewController.swift in Sources */,
+				7224F3FC27D491D700A6728B /* SkillsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

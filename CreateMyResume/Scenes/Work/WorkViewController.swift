@@ -10,7 +10,6 @@ import UIKit
 class WorkViewController: UIViewController {
     
     @IBOutlet weak var totalExperienceTextField: UITextField!
-    @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var tableViewHeightLC: NSLayoutConstraint!
     
