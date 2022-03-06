@@ -1,0 +1,6 @@
+framework module Pods_CreateMyResume_CreateMyResumeUITests {
+  umbrella header "Pods-CreateMyResume-CreateMyResumeUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

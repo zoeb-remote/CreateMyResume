@@ -1,0 +1,6 @@
+framework module Pods_CreateMyResume {
+  umbrella header "Pods-CreateMyResume-umbrella.h"
+
+  export *
+  module * { export * }
+}
