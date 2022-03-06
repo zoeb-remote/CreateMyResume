@@ -9,9 +9,9 @@ import UIKit
 
 class SkillsViewController: UIViewController {
     
-    @IBOutlet weak var skillsTextField: UITextField!
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var tableViewHeightLC: NSLayoutConstraint!
+    @IBOutlet private weak var skillsTextField: UITextField!
+    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var tableViewHeightLC: NSLayoutConstraint!
     
     weak var delegate: NextActionProtocol?
     

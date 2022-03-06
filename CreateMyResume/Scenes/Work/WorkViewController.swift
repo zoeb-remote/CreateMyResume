@@ -9,9 +9,9 @@ import UIKit
 
 class WorkViewController: UIViewController {
     
-    @IBOutlet weak var totalExperienceTextField: UITextField!
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var tableViewHeightLC: NSLayoutConstraint!
+    @IBOutlet private weak var totalExperienceTextField: UITextField!
+    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var tableViewHeightLC: NSLayoutConstraint!
     
     weak var delegate: NextActionProtocol?
     

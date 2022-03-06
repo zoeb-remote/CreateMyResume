@@ -10,27 +10,25 @@ import PDFGenerator
 
 class PDFResumeViewController: UIViewController {
     
-    @IBOutlet weak var contentView: UIView!
-    
-    @IBOutlet weak var imageView: UIImageView!
-    
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var phoneLabel: UILabel!
-    @IBOutlet weak var emailLabel: UILabel!
-    @IBOutlet weak var addressLabel: UILabel!
-    @IBOutlet weak var careerObjectiveLabel: UILabel!
-    @IBOutlet weak var experienceLabel: UILabel!
-    @IBOutlet weak var skillsLabel: UILabel!
-    @IBOutlet weak var experienceStackView: UIStackView!
-    @IBOutlet weak var educationStackView: UIStackView!
-    @IBOutlet weak var projectDetailsStackView: UIStackView!
+    @IBOutlet private weak var contentView: UIView!
+    @IBOutlet private weak var imageView: UIImageView!
+    @IBOutlet private weak var nameLabel: UILabel!
+    @IBOutlet private weak var phoneLabel: UILabel!
+    @IBOutlet private weak var emailLabel: UILabel!
+    @IBOutlet private weak var addressLabel: UILabel!
+    @IBOutlet private weak var careerObjectiveLabel: UILabel!
+    @IBOutlet private weak var experienceLabel: UILabel!
+    @IBOutlet private weak var skillsLabel: UILabel!
+    @IBOutlet private weak var experienceStackView: UIStackView!
+    @IBOutlet private weak var educationStackView: UIStackView!
+    @IBOutlet private weak var projectDetailsStackView: UIStackView!
     
     var inputModel: PDFResumeInputModel!
     private lazy var viewModel = PDFResumeViewModel(resumeModel: inputModel.resumeModel)
     
-    fileprivate var outputAsData: Bool = false
+    private var outputAsData: Bool = false
     
-    fileprivate func getDestinationPath() -> String {
+    private func getDestinationPath() -> String {
         return NSHomeDirectory() + "/" + viewModel.resumeModel.title.replacingOccurrences(of: " ", with: "_") + ".pdf"
     }
 
@@ -47,12 +45,12 @@ class PDFResumeViewController: UIViewController {
         }
     }
     
-    @IBAction fileprivate func generateSamplePDFFromViews(_ sender: AnyObject?) {
+    @IBAction private func generateSamplePDFFromViews(_ sender: AnyObject?) {
         generatePDF()
     }
     
-    fileprivate func openPDFViewer(_ pdfPath: String) {
-        self.performSegue(withIdentifier: "PreviewVC", sender: pdfPath)
+    private func openPDFViewer(_ pdfPath: String) {
+        self.performSegue(withIdentifier: PDFResumeViewModel.Constants.previewVCIdentifier, sender: pdfPath)
     }
     
     private func generatePDF() {
@@ -80,27 +78,21 @@ class PDFResumeViewController: UIViewController {
         }
         
         nameLabel.text = viewModel.resumeModel.title
-        phoneLabel.text = "Phone: " + viewModel.resumeModel.contact.mobile
-        emailLabel.text = "Email: " + viewModel.resumeModel.contact.email
+        phoneLabel.text = PDFResumeViewModel.Constants.phoneKey + viewModel.resumeModel.contact.mobile
+        emailLabel.text = PDFResumeViewModel.Constants.emailKey + viewModel.resumeModel.contact.email
         addressLabel.text = viewModel.resumeModel.contact.address
         careerObjectiveLabel.text = viewModel.resumeModel.careerObjective.objective
         experienceLabel.text = viewModel.resumeModel.workSummary.totalExperience
-        skillsLabel.text = ""
-        for skill in viewModel.resumeModel.skills.skillModels {
-            if skillsLabel.text?.isEmpty == false {
-                skillsLabel.text = (skillsLabel.text ?? "") + ", "
-            }
-            skillsLabel.text = (skillsLabel.text ?? "") + skill.skill
-        }
+        skillsLabel.text = viewModel.skillsText
         
         if viewModel.resumeModel.workSummary.workModels.isEmpty {
             experienceStackView.isHidden = true
         } else {
             for workModel in viewModel.resumeModel.workSummary.workModels {
                 let companyNameLabel = UILabel()
-                companyNameLabel.font = UIFont.systemFont(ofSize: 15, weight: .medium)
+                companyNameLabel.font = PDFResumeViewModel.Constants.systemFontMedium
                 let durationLabel = UILabel()
-                durationLabel.font = UIFont.systemFont(ofSize: 15.0)
+                durationLabel.font = PDFResumeViewModel.Constants.systemFont
                 companyNameLabel.text = workModel.companyName
                 durationLabel.text = workModel.duration
                 let stackView = createStackView(views: [companyNameLabel, durationLabel])
@@ -113,17 +105,17 @@ class PDFResumeViewController: UIViewController {
         } else {
             for educationModel in viewModel.resumeModel.educationDetails.educationModels {
                 let classLabel = UILabel()
-                classLabel.font = UIFont.systemFont(ofSize: 15, weight: .medium)
+                classLabel.font = PDFResumeViewModel.Constants.systemFontMedium
                 let passingYearLabel = UILabel()
-                passingYearLabel.font = UIFont.systemFont(ofSize: 15.0)
+                passingYearLabel.font = PDFResumeViewModel.Constants.systemFont
                 let percentageLabel = UILabel()
-                percentageLabel.font = UIFont.systemFont(ofSize: 15, weight: .medium)
+                percentageLabel.font = PDFResumeViewModel.Constants.systemFontMedium
                 let percentageValueLabel = UILabel()
-                percentageValueLabel.font = UIFont.systemFont(ofSize: 15.0)
+                percentageValueLabel.font = PDFResumeViewModel.Constants.systemFont
                 classLabel.text = educationModel.classDetails
                 passingYearLabel.text = "\(educationModel.passingYear)"
                 
-                percentageLabel.text = "Percentage/CGPA"
+                percentageLabel.text = PDFResumeViewModel.Constants.percentageKey
                 percentageValueLabel.text = "\(educationModel.percentage)"
                 let stackView = createStackView(views: [classLabel, passingYearLabel])
                 let stackViewPercentage = createStackView(views: [percentageLabel, percentageValueLabel])
@@ -138,28 +130,28 @@ class PDFResumeViewController: UIViewController {
         } else {
             for projectsModel in viewModel.resumeModel.projectDetails.projectsModels {
                 let projectNameLabel = UILabel()
-                projectNameLabel.font = UIFont.systemFont(ofSize: 15, weight: .medium)
+                projectNameLabel.font = PDFResumeViewModel.Constants.systemFontMedium
                 let projectNameValueLabel = UILabel()
-                projectNameValueLabel.font = UIFont.systemFont(ofSize: 15.0)
+                projectNameValueLabel.font = PDFResumeViewModel.Constants.systemFont
                 
                 let teamSizeLabel = UILabel()
-                teamSizeLabel.font = UIFont.systemFont(ofSize: 15, weight: .medium)
+                teamSizeLabel.font = PDFResumeViewModel.Constants.systemFontMedium
                 let teamSizeValueLabel = UILabel()
-                teamSizeValueLabel.font = UIFont.systemFont(ofSize: 15.0)
+                teamSizeValueLabel.font = PDFResumeViewModel.Constants.systemFont
                 
                 let techUsedLabel = UILabel()
-                techUsedLabel.font = UIFont.systemFont(ofSize: 15, weight: .medium)
+                techUsedLabel.font = PDFResumeViewModel.Constants.systemFontMedium
                 
                 let roleLabel = UILabel()
-                roleLabel.font = UIFont.systemFont(ofSize: 15, weight: .medium)
+                roleLabel.font = PDFResumeViewModel.Constants.systemFontMedium
                 
-                projectNameLabel.text = "Project Name"
+                projectNameLabel.text = PDFResumeViewModel.Constants.projectNameKey
                 projectNameValueLabel.text = projectsModel.projectName
-                teamSizeLabel.text = "Team Size"
+                teamSizeLabel.text = PDFResumeViewModel.Constants.teamSizeKey
                 teamSizeValueLabel.text = "\(projectsModel.teamSize)"
                 
-                techUsedLabel.text = "Technology used: \(projectsModel.technologyUsed)"
-                roleLabel.text = "Role: \(projectsModel.role)"
+                techUsedLabel.text = PDFResumeViewModel.Constants.technologyUsedKey + projectsModel.technologyUsed
+                roleLabel.text = PDFResumeViewModel.Constants.roleKey + projectsModel.role
                 
                 let stackView = createStackView(views: [projectNameLabel, projectNameValueLabel])
                 let stackViewTeamSize = createStackView(views: [teamSizeLabel, teamSizeValueLabel])

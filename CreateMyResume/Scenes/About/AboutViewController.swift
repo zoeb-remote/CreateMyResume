@@ -13,9 +13,9 @@ protocol NextActionProtocol: class {
 
 class AboutViewController: UIViewController {
     
-    @IBOutlet weak var userImageButton: UIButton!
-    @IBOutlet weak var firstNameTextField: UITextField!
-    @IBOutlet weak var lastNameTextField: UITextField!
+    @IBOutlet private weak var userImageButton: UIButton!
+    @IBOutlet private weak var firstNameTextField: UITextField!
+    @IBOutlet private weak var lastNameTextField: UITextField!
     
     weak var delegate: NextActionProtocol?
     var imagePicker: ImagePicker!

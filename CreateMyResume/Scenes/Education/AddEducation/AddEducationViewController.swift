@@ -12,9 +12,9 @@ protocol AddEducationViewControllerProtocol: class {
 }
 
 class AddEducationViewController: UIViewController {
-    @IBOutlet weak var classTextField: UITextField!
-    @IBOutlet weak var passingYearTextField: UITextField!
-    @IBOutlet weak var percentageTextField: UITextField!
+    @IBOutlet private weak var classTextField: UITextField!
+    @IBOutlet private weak var passingYearTextField: UITextField!
+    @IBOutlet private weak var percentageTextField: UITextField!
     
     private lazy var viewModel = AddEducationViewModel(contentModel: AddEducationModel())
     weak var delegate: AddEducationViewControllerProtocol?

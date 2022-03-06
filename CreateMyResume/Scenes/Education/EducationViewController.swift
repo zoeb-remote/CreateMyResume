@@ -9,8 +9,8 @@ import UIKit
 
 class EducationViewController: UIViewController {
     
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var tableViewHeightLC: NSLayoutConstraint!
+    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var tableViewHeightLC: NSLayoutConstraint!
     
     weak var delegate: NextActionProtocol?
     

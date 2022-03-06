@@ -9,7 +9,7 @@ import UIKit
 
 class CareerObjectiveViewController: UIViewController {
     
-    @IBOutlet weak var careerObjectiveTextView: UITextView!
+    @IBOutlet private weak var careerObjectiveTextView: UITextView!
     
     weak var delegate: NextActionProtocol?
     

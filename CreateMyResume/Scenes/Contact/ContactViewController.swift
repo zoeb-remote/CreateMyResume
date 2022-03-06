@@ -9,9 +9,9 @@ import UIKit
 
 class ContactViewController: UIViewController {
     
-    @IBOutlet weak var phoneTextField: UITextField!
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var addressTextField: UITextField!
+    @IBOutlet private weak var phoneTextField: UITextField!
+    @IBOutlet private weak var emailTextField: UITextField!
+    @IBOutlet private weak var addressTextField: UITextField!
     
     weak var delegate: NextActionProtocol?
     

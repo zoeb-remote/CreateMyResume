@@ -12,11 +12,11 @@ protocol AddProjectViewControllerProtocol: class {
 }
 
 class AddProjectViewController: UIViewController {
-    @IBOutlet weak var projectNameTextField: UITextField!
-    @IBOutlet weak var teamSizeTextField: UITextField!
-    @IBOutlet weak var summaryTextField: UITextField!
-    @IBOutlet weak var techUsedTextField: UITextField!
-    @IBOutlet weak var roleTextField: UITextField!
+    @IBOutlet private weak var projectNameTextField: UITextField!
+    @IBOutlet private weak var teamSizeTextField: UITextField!
+    @IBOutlet private weak var summaryTextField: UITextField!
+    @IBOutlet private weak var techUsedTextField: UITextField!
+    @IBOutlet private weak var roleTextField: UITextField!
     
     private lazy var viewModel = AddProjectViewModel(contentModel: AddProjectModel())
     weak var delegate: AddProjectViewControllerProtocol?

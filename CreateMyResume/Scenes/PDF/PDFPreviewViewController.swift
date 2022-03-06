@@ -11,7 +11,7 @@ import WebKit
 
 class PDFPreviewViewController: UIViewController {
 
-    @IBOutlet fileprivate weak var webView: WKWebView!
+    @IBOutlet private weak var webView: WKWebView!
     var url: URL!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +30,7 @@ class PDFPreviewViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
 
-    @IBAction fileprivate func close(_ sender: AnyObject!) {
+    @IBAction private func close(_ sender: AnyObject!) {
         dismiss(animated: true, completion: nil)
     }
 
@@ -54,7 +54,7 @@ class PDFPreviewViewController: UIViewController {
             
         }
         else {
-            print("document was not found")
+            debugPrint("document was not found")
         }
     }
 }

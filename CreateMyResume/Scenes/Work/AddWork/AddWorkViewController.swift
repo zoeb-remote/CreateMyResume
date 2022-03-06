@@ -12,9 +12,9 @@ protocol AddWorkViewControllerProtocol: class {
 }
 
 class AddWorkViewController: UIViewController {
-    @IBOutlet weak var companyTextField: UITextField!
-    @IBOutlet weak var durationTextField: UITextField!
-    @IBOutlet weak var isCurrentCompanySwitch: UISwitch!
+    @IBOutlet private weak var companyTextField: UITextField!
+    @IBOutlet private weak var durationTextField: UITextField!
+    @IBOutlet private weak var isCurrentCompanySwitch: UISwitch!
     
     private lazy var viewModel = AddWorkViewModel(contentModel: AddWorkModel())
     weak var delegate: AddWorkViewControllerProtocol?
