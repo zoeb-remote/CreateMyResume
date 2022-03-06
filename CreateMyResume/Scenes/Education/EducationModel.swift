@@ -8,14 +8,10 @@
 import Foundation
 
 class EducationContentModel: Codable {
-    var classDetails: String
-    var year: Int
-    var percentage: Double
+    var educationModels: [AddEducationModel]
     
     init() {
-        self.classDetails = ""
-        self.year = 0
-        self.percentage = 0
+        self.educationModels = [AddEducationModel]()
     }
     
 }

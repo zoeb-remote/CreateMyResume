@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		7224F3FC27D491D700A6728B /* SkillsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7224F3FB27D491D700A6728B /* SkillsTableViewCell.swift */; };
+		7224F40327D49C7700A6728B /* EducationDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7224F40227D49C7700A6728B /* EducationDetailsTableViewCell.swift */; };
+		7224F40B27D49C9400A6728B /* AddEducationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7224F40A27D49C9400A6728B /* AddEducationViewController.swift */; };
+		7224F41027D49CA000A6728B /* AddEducationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7224F40F27D49CA000A6728B /* AddEducationViewModel.swift */; };
+		7224F41527D49CAD00A6728B /* AddEducationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7224F41427D49CAD00A6728B /* AddEducationModel.swift */; };
 		728E2BBE27D39E6C00CD00BE /* AddWorkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728E2BBD27D39E6C00CD00BE /* AddWorkViewController.swift */; };
 		728E2BC327D39E8300CD00BE /* AddWorkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728E2BC227D39E8300CD00BE /* AddWorkViewModel.swift */; };
 		728E2BC827D39FFC00CD00BE /* AddWorkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728E2BC727D39FFC00CD00BE /* AddWorkModel.swift */; };
@@ -71,6 +75,10 @@
 
 /* Begin PBXFileReference section */
 		7224F3FB27D491D700A6728B /* SkillsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsTableViewCell.swift; sourceTree = "<group>"; };
+		7224F40227D49C7700A6728B /* EducationDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationDetailsTableViewCell.swift; sourceTree = "<group>"; };
+		7224F40A27D49C9400A6728B /* AddEducationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEducationViewController.swift; sourceTree = "<group>"; };
+		7224F40F27D49CA000A6728B /* AddEducationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEducationViewModel.swift; sourceTree = "<group>"; };
+		7224F41427D49CAD00A6728B /* AddEducationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEducationModel.swift; sourceTree = "<group>"; };
 		728E2BBD27D39E6C00CD00BE /* AddWorkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkViewController.swift; sourceTree = "<group>"; };
 		728E2BC227D39E8300CD00BE /* AddWorkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkViewModel.swift; sourceTree = "<group>"; };
 		728E2BC727D39FFC00CD00BE /* AddWorkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkModel.swift; sourceTree = "<group>"; };
@@ -154,6 +162,24 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		7224F40027D49C4600A6728B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				7224F40227D49C7700A6728B /* EducationDetailsTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		7224F40127D49C4E00A6728B /* AddEducation */ = {
+			isa = PBXGroup;
+			children = (
+				7224F41427D49CAD00A6728B /* AddEducationModel.swift */,
+				7224F40F27D49CA000A6728B /* AddEducationViewModel.swift */,
+				7224F40A27D49C9400A6728B /* AddEducationViewController.swift */,
+			);
+			path = AddEducation;
+			sourceTree = "<group>";
+		};
 		728E2BBC27D39E5800CD00BE /* AddWork */ = {
 			isa = PBXGroup;
 			children = (
@@ -231,6 +257,8 @@
 				729F995427D395450033A2D3 /* EducationModel.swift */,
 				729F995927D395450033A2D3 /* EducationViewModel.swift */,
 				729F995E27D395450033A2D3 /* EducationViewController.swift */,
+				7224F40027D49C4600A6728B /* Cell */,
+				7224F40127D49C4E00A6728B /* AddEducation */,
 			);
 			path = Education;
 			sourceTree = "<group>";
@@ -497,6 +525,8 @@
 				729F991327D395450033A2D3 /* ContactViewModel.swift in Sources */,
 				728E2BC827D39FFC00CD00BE /* AddWorkModel.swift in Sources */,
 				72EEC7FC27D32B6900F686E5 /* SceneDelegate.swift in Sources */,
+				7224F41027D49CA000A6728B /* AddEducationViewModel.swift in Sources */,
+				7224F40B27D49C9400A6728B /* AddEducationViewController.swift in Sources */,
 				72EEC85D27D33E7200F686E5 /* ContentsViewModel.swift in Sources */,
 				729F993727D395450033A2D3 /* WorkModel.swift in Sources */,
 				729F993227D395450033A2D3 /* CareerObjectiveViewController.swift in Sources */,
@@ -504,6 +534,7 @@
 				729F996527D395450033A2D3 /* ProjectDetailsModel.swift in Sources */,
 				72EEC84C27D3375200F686E5 /* ResumeViewModel.swift in Sources */,
 				728E2BD127D3AB2400CD00BE /* CompanyDetailsTableViewCell.swift in Sources */,
+				7224F40327D49C7700A6728B /* EducationDetailsTableViewCell.swift in Sources */,
 				729F996A27D395450033A2D3 /* ProjectDetailsViewModel.swift in Sources */,
 				729F995F27D395450033A2D3 /* EducationViewController.swift in Sources */,
 				729F992827D395450033A2D3 /* CareerObjectiveModel.swift in Sources */,
@@ -512,6 +543,7 @@
 				728E2BC327D39E8300CD00BE /* AddWorkViewModel.swift in Sources */,
 				729F990E27D395440033A2D3 /* ContactViewController.swift in Sources */,
 				728E2BBE27D39E6C00CD00BE /* AddWorkViewController.swift in Sources */,
+				7224F41527D49CAD00A6728B /* AddEducationModel.swift in Sources */,
 				7224F3FC27D491D700A6728B /* SkillsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

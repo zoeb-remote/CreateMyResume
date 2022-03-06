@@ -15,8 +15,8 @@ class ResumeModel: Codable {
     let careerObjective: CareerObjectiveContentModel
     let workSummary: WorkContentModel
     let skills: [SkillContentModel]
-    let educationDetails: [EducationContentModel]
-    let projectDetails: [ProjectDetailsContentModel]
+    let educationDetails: EducationContentModel
+    let projectDetails: ProjectDetailsContentModel
     
     init() {
         self.resumeId = ""
@@ -26,8 +26,8 @@ class ResumeModel: Codable {
         self.careerObjective = CareerObjectiveContentModel()
         self.workSummary = WorkContentModel()
         self.skills = [SkillContentModel]()
-        self.educationDetails = [EducationContentModel]()
-        self.projectDetails = [ProjectDetailsContentModel]()
+        self.educationDetails = EducationContentModel()
+        self.projectDetails = ProjectDetailsContentModel()
     }
 }
 
