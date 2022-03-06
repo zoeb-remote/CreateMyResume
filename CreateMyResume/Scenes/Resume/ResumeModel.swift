@@ -9,7 +9,7 @@ import Foundation
 
 class ResumeModel: Codable {
     let resumeId: String
-    let title: String
+    var title: String
     let about: AboutContentModel
     let contact: ContactContentModel
     let careerObjective: CareerObjectiveContentModel
@@ -19,7 +19,7 @@ class ResumeModel: Codable {
     let projectDetails: ProjectDetailsContentModel
     
     init() {
-        self.resumeId = ""
+        self.resumeId = UUID().uuidString
         self.title = ""
         self.about = AboutContentModel()
         self.contact = ContactContentModel()
@@ -32,7 +32,7 @@ class ResumeModel: Codable {
 }
 
 extension ResumeModel {
-    static func readResumes(for email: String? = nil) -> [ResumeModel]? {
+    static func readResumes(for resumeId: String? = nil) -> [ResumeModel]? {
         //array of resume model [resume model]
         // Read/Get Data
         if let data = UserDefaults.standard.data(forKey: "resumesKey") {
@@ -43,14 +43,14 @@ extension ResumeModel {
 
                 // Decode User
                 let resumes = try decoder.decode([ResumeModel].self, from: data)
-                guard let email = email else {
+                guard let resumeId = resumeId else {
                     // To return all resumes
                     return resumes
                 }
                 
                 // To return filtered resumes as per email
                 let filteredResumes = resumes.filter {
-                    $0.contact.email == email
+                    $0.resumeId == resumeId
                 }
                 return filteredResumes
 
@@ -63,8 +63,26 @@ extension ResumeModel {
     }
     
     func writeResume() {
+        if self.title.isEmpty {
+            self.title = self.about.firstName + " " + self.about.lastName
+        }
+        
         var resumes = ResumeModel.readResumes() ?? [ResumeModel]()
-        resumes.append(self)
+        if resumes.isEmpty {
+            resumes.append(self)
+        } else {
+            var resumeList = [ResumeModel]()
+            for existingResume in resumes {
+                if existingResume.resumeId == self.resumeId {
+                    //Replace by new resume
+                    resumeList.append(self)
+                } else {
+                    resumeList.append(existingResume)
+                }
+            }
+            
+            resumes = resumeList
+        }
 
         do {
             // Create JSON Encoder

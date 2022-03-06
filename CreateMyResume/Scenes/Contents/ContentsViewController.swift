@@ -20,7 +20,7 @@ class ContentsViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? AboutViewController {
-            vc.inputModel = AboutInputModel(contentModel: viewModel.resume.about)
+            vc.inputModel = AboutInputModel(contentModel: viewModel.resume.about, resumeId: viewModel.resume.resumeId)
             vc.delegate = self
         } else if let vc = segue.destination as? ContactViewController {
             vc.inputModel = ContactInputModel(contentModel: viewModel.resume.contact)
@@ -76,6 +76,8 @@ extension ContentsViewController: UITableViewDataSource, UITableViewDelegate {
 
 extension ContentsViewController: NextActionProtocol {
     func performNext(identifier: String) {
+        self.viewModel.resume.writeResume()
+        
         self.navigationController?.popViewController(animated: false)
         performSegue(withIdentifier: identifier, sender: self)
     }

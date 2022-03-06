@@ -21,7 +21,7 @@ class AboutViewController: UIViewController {
     var imagePicker: ImagePicker!
     
     var inputModel: AboutInputModel!
-    private lazy var viewModel = AboutViewModel(contentModel: inputModel.contentModel)
+    private lazy var viewModel = AboutViewModel(contentModel: inputModel.contentModel, resumeId: inputModel.resumeId)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,8 +52,7 @@ extension AboutViewController: ImagePickerDelegate {
     func didSelect(image: UIImage?) {
         if let image = image {
             userImageButton.setImage(image, for: .normal)
-            let name = UUID().uuidString
-            debugPrint("UUID: " + name)
+            let name = viewModel.resumeId
             do {
                 try ImageStore.store(image: image, name: name)
                 viewModel.contentModel.picture = name

@@ -10,10 +10,12 @@ import UIKit
 
 struct AboutInputModel {
     let contentModel: AboutContentModel
+    let resumeId: String
 }
 
 class AboutViewModel {
     var contentModel: AboutContentModel
+    let resumeId: String
     var userImage: UIImage? {
         let imageName = self.contentModel.picture
         if imageName.isEmpty == false {
@@ -23,7 +25,8 @@ class AboutViewModel {
         }
     }
     
-    init(contentModel: AboutContentModel) {
+    init(contentModel: AboutContentModel, resumeId: String) {
         self.contentModel = contentModel
+        self.resumeId = resumeId
     }
 }
