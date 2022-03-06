@@ -16,7 +16,7 @@ class SkillsViewController: UIViewController {
     weak var delegate: NextActionProtocol?
     
     var inputModel: SkillsInputModel!
-    private lazy var viewModel = SkillsViewModel(contentModels: inputModel.contentModels)
+    private lazy var viewModel = SkillsViewModel(contentModel: inputModel.contentModel)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +39,7 @@ class SkillsViewController: UIViewController {
 
 extension SkillsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let count = self.viewModel.contentModels.count
+        let count = self.viewModel.contentModel.skillModels.count
         tableView.isHidden = count == 0
         return count
     }
@@ -49,7 +49,7 @@ extension SkillsViewController: UITableViewDataSource, UITableViewDelegate {
             return UITableViewCell()
         }
         
-        let model = self.viewModel.contentModels[indexPath.item]
+        let model = self.viewModel.contentModel.skillModels[indexPath.item]
         cell.skillNameLabel.text = model.skill
         cell.skillIndex = indexPath.item
         cell.delegate = self
@@ -67,16 +67,16 @@ private extension SkillsViewController {
     }
     
     func didAddSkill(_ skill: String) {
-        let skillModel = SkillContentModel()
+        let skillModel = AddSkillModel()
         skillModel.skill = skill
-        self.viewModel.contentModels.append(skillModel)
+        self.viewModel.contentModel.skillModels.append(skillModel)
         refresh()
     }
 }
 
 extension SkillsViewController: SkillsTableViewProtocol {
     func didRemoveSkill(skillIndex: Int) {
-        self.viewModel.contentModels.remove(at: skillIndex)
+        self.viewModel.contentModel.skillModels.remove(at: skillIndex)
         refresh()
     }
 }

@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 struct SkillsInputModel {
-    let contentModels: [SkillContentModel]
+    let contentModel: SkillContentModel
 }
 
 class SkillsViewModel {
@@ -17,14 +17,14 @@ class SkillsViewModel {
         static let cellHeight: CGFloat = 90
         static let cellIdentifier = "SkillsTableViewCellIdentifier"
     }
-    var contentModels: [SkillContentModel]
+    var contentModel: SkillContentModel
     
-    init(contentModels: [SkillContentModel]) {
-        self.contentModels = contentModels
+    init(contentModel: SkillContentModel) {
+        self.contentModel = contentModel
     }
     
     var tableViewHeight: CGFloat {
-        let count = CGFloat(self.contentModels.count)
+        let count = CGFloat(self.contentModel.skillModels.count)
         return Constants.cellHeight * count
     }
 }

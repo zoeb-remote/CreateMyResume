@@ -32,7 +32,7 @@ class ContentsViewController: UIViewController {
             vc.inputModel = WorkInputModel(contentModel: viewModel.resume.workSummary)
             vc.delegate = self
         } else if let vc = segue.destination as? SkillsViewController {
-            vc.inputModel = SkillsInputModel(contentModels: viewModel.resume.skills)
+            vc.inputModel = SkillsInputModel(contentModel: viewModel.resume.skills)
             vc.delegate = self
         } else if let vc = segue.destination as? EducationViewController {
             vc.inputModel = EducationInputModel(contentModel: viewModel.resume.educationDetails)
