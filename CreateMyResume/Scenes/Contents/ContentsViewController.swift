@@ -38,8 +38,8 @@ class ContentsViewController: UIViewController {
             vc.inputModel = EducationInputModel(contentModel: viewModel.resume.educationDetails)
             vc.delegate = self
         } else if let vc = segue.destination as? ProjectDetailsViewController {
-//            vc.inputModel = ProjectDetailsInputModel(contentModel: viewModel.resume.projectDetails)
-//            vc.delegate = self
+            vc.inputModel = ProjectDetailsInputModel(contentModel: viewModel.resume.projectDetails)
+            vc.delegate = self
         }
     }
 

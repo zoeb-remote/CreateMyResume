@@ -12,6 +12,10 @@
 		7224F40B27D49C9400A6728B /* AddEducationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7224F40A27D49C9400A6728B /* AddEducationViewController.swift */; };
 		7224F41027D49CA000A6728B /* AddEducationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7224F40F27D49CA000A6728B /* AddEducationViewModel.swift */; };
 		7224F41527D49CAD00A6728B /* AddEducationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7224F41427D49CAD00A6728B /* AddEducationModel.swift */; };
+		7224F43227D4AA5800A6728B /* AddProjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7224F42D27D4AA5700A6728B /* AddProjectModel.swift */; };
+		7224F43327D4AA5800A6728B /* AddProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7224F42E27D4AA5700A6728B /* AddProjectViewController.swift */; };
+		7224F43427D4AA5800A6728B /* AddProjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7224F42F27D4AA5700A6728B /* AddProjectViewModel.swift */; };
+		7224F43527D4AA5800A6728B /* ProjectDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7224F43127D4AA5700A6728B /* ProjectDetailsTableViewCell.swift */; };
 		728E2BBE27D39E6C00CD00BE /* AddWorkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728E2BBD27D39E6C00CD00BE /* AddWorkViewController.swift */; };
 		728E2BC327D39E8300CD00BE /* AddWorkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728E2BC227D39E8300CD00BE /* AddWorkViewModel.swift */; };
 		728E2BC827D39FFC00CD00BE /* AddWorkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728E2BC727D39FFC00CD00BE /* AddWorkModel.swift */; };
@@ -79,6 +83,10 @@
 		7224F40A27D49C9400A6728B /* AddEducationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEducationViewController.swift; sourceTree = "<group>"; };
 		7224F40F27D49CA000A6728B /* AddEducationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEducationViewModel.swift; sourceTree = "<group>"; };
 		7224F41427D49CAD00A6728B /* AddEducationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEducationModel.swift; sourceTree = "<group>"; };
+		7224F42D27D4AA5700A6728B /* AddProjectModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddProjectModel.swift; sourceTree = "<group>"; };
+		7224F42E27D4AA5700A6728B /* AddProjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddProjectViewController.swift; sourceTree = "<group>"; };
+		7224F42F27D4AA5700A6728B /* AddProjectViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddProjectViewModel.swift; sourceTree = "<group>"; };
+		7224F43127D4AA5700A6728B /* ProjectDetailsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		728E2BBD27D39E6C00CD00BE /* AddWorkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkViewController.swift; sourceTree = "<group>"; };
 		728E2BC227D39E8300CD00BE /* AddWorkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkViewModel.swift; sourceTree = "<group>"; };
 		728E2BC727D39FFC00CD00BE /* AddWorkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkModel.swift; sourceTree = "<group>"; };
@@ -180,6 +188,24 @@
 			path = AddEducation;
 			sourceTree = "<group>";
 		};
+		7224F42C27D4AA5700A6728B /* AddProject */ = {
+			isa = PBXGroup;
+			children = (
+				7224F42D27D4AA5700A6728B /* AddProjectModel.swift */,
+				7224F42F27D4AA5700A6728B /* AddProjectViewModel.swift */,
+				7224F42E27D4AA5700A6728B /* AddProjectViewController.swift */,
+			);
+			path = AddProject;
+			sourceTree = "<group>";
+		};
+		7224F43027D4AA5700A6728B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				7224F43127D4AA5700A6728B /* ProjectDetailsTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		728E2BBC27D39E5800CD00BE /* AddWork */ = {
 			isa = PBXGroup;
 			children = (
@@ -269,6 +295,8 @@
 				729F996427D395450033A2D3 /* ProjectDetailsModel.swift */,
 				729F996927D395450033A2D3 /* ProjectDetailsViewModel.swift */,
 				729F996E27D395450033A2D3 /* ProjectDetailsViewController.swift */,
+				7224F43027D4AA5700A6728B /* Cell */,
+				7224F42C27D4AA5700A6728B /* AddProject */,
 			);
 			path = ProjectDetails;
 			sourceTree = "<group>";
@@ -507,11 +535,13 @@
 				729F994B27D395450033A2D3 /* SkillsViewModel.swift in Sources */,
 				729F994127D395450033A2D3 /* WorkViewController.swift in Sources */,
 				72EEC7FA27D32B6900F686E5 /* AppDelegate.swift in Sources */,
+				7224F43527D4AA5800A6728B /* ProjectDetailsTableViewCell.swift in Sources */,
 				72EEC85127D3376E00F686E5 /* ResumeModel.swift in Sources */,
 				729F98F727D375610033A2D3 /* AboutViewModel.swift in Sources */,
 				729F98FC27D375770033A2D3 /* AboutModel.swift in Sources */,
 				729F995527D395450033A2D3 /* EducationModel.swift in Sources */,
 				729F993C27D395450033A2D3 /* WorkViewModel.swift in Sources */,
+				7224F43427D4AA5800A6728B /* AddProjectViewModel.swift in Sources */,
 				729F995027D395450033A2D3 /* SkillsViewController.swift in Sources */,
 				729F994627D395450033A2D3 /* SkillsModel.swift in Sources */,
 				729F991B27D395450033A2D3 /* ContactModel.swift in Sources */,
@@ -537,7 +567,9 @@
 				7224F40327D49C7700A6728B /* EducationDetailsTableViewCell.swift in Sources */,
 				729F996A27D395450033A2D3 /* ProjectDetailsViewModel.swift in Sources */,
 				729F995F27D395450033A2D3 /* EducationViewController.swift in Sources */,
+				7224F43227D4AA5800A6728B /* AddProjectModel.swift in Sources */,
 				729F992827D395450033A2D3 /* CareerObjectiveModel.swift in Sources */,
+				7224F43327D4AA5800A6728B /* AddProjectViewController.swift in Sources */,
 				729F996F27D395450033A2D3 /* ProjectDetailsViewController.swift in Sources */,
 				72EEC84727D334C900F686E5 /* ResumeViewController.swift in Sources */,
 				728E2BC327D39E8300CD00BE /* AddWorkViewModel.swift in Sources */,

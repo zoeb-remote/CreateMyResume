@@ -8,17 +8,10 @@
 import Foundation
 
 class ProjectDetailsContentModel: Codable {
-    var projectName: String
-    var teamSize: Int
-    var summary: String
-    var technologyUsed: String
-    var role: String
+    var projectsModels: [AddProjectModel]
     
     init() {
-        self.projectName = ""
-        self.teamSize = 0
-        self.summary = ""
-        self.technologyUsed = ""
-        self.role = ""
+        self.projectsModels = [AddProjectModel]()
     }
+    
 }
