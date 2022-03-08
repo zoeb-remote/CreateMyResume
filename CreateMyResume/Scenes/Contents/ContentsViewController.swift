@@ -78,11 +78,9 @@ extension ContentsViewController: UITableViewDataSource, UITableViewDelegate {
 
 extension ContentsViewController: NextActionProtocol {
     func performNext(identifier: String) {
-        self.viewModel.resume.writeResume()
+        ResumeViewModel.writeResume(self.viewModel.resume)
         
         self.navigationController?.popViewController(animated: false)
         performSegue(withIdentifier: identifier, sender: self)
     }
-    
-    
 }
