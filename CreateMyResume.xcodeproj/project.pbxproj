@@ -24,6 +24,16 @@
 		728E2BC827D39FFC00CD00BE /* AddWorkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728E2BC727D39FFC00CD00BE /* AddWorkModel.swift */; };
 		728E2BD127D3AB2400CD00BE /* CompanyDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728E2BD027D3AB2400CD00BE /* CompanyDetailsTableViewCell.swift */; };
 		728E2C3727D3BB5300CD00BE /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728E2C3627D3BB5300CD00BE /* UIViewControllerExtension.swift */; };
+		729CB02527D7499D00F81462 /* ResumeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729CB02427D7499D00F81462 /* ResumeViewModelTests.swift */; };
+		729CB07127D758B500F81462 /* AboutViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729CB07027D758B500F81462 /* AboutViewModelTests.swift */; };
+		729CB08327D762CF00F81462 /* ContentsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729CB08227D762CF00F81462 /* ContentsViewModelTests.swift */; };
+		729CB09027D76F5D00F81462 /* ContactViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729CB08F27D76F5D00F81462 /* ContactViewModelTests.swift */; };
+		729CB09527D76F8100F81462 /* CareerObjectiveViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729CB09427D76F8100F81462 /* CareerObjectiveViewModelTests.swift */; };
+		729CB09A27D76F8F00F81462 /* WorkViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729CB09927D76F8F00F81462 /* WorkViewModelTests.swift */; };
+		729CB09F27D76F9A00F81462 /* SkillsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729CB09E27D76F9A00F81462 /* SkillsViewModelTests.swift */; };
+		729CB0A427D76FA800F81462 /* EducationViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729CB0A327D76FA800F81462 /* EducationViewModelTests.swift */; };
+		729CB0A927D76FB600F81462 /* ProjectDetailsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729CB0A827D76FB600F81462 /* ProjectDetailsViewModelTests.swift */; };
+		729CB0B227D7798600F81462 /* PDFResumeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729CB0B127D7798600F81462 /* PDFResumeViewModelTests.swift */; };
 		729F98F227D375470033A2D3 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729F98F127D375470033A2D3 /* AboutViewController.swift */; };
 		729F98F727D375610033A2D3 /* AboutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729F98F627D375610033A2D3 /* AboutViewModel.swift */; };
 		729F98FC27D375770033A2D3 /* AboutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729F98FB27D375770033A2D3 /* AboutModel.swift */; };
@@ -60,7 +70,6 @@
 		72EEC85127D3376E00F686E5 /* ResumeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72EEC85027D3376E00F686E5 /* ResumeModel.swift */; };
 		72EEC85C27D33E7200F686E5 /* ContentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72EEC85927D33E7200F686E5 /* ContentsViewController.swift */; };
 		72EEC85D27D33E7200F686E5 /* ContentsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72EEC85A27D33E7200F686E5 /* ContentsViewModel.swift */; };
-		72EEC85E27D33E7200F686E5 /* ContentsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72EEC85B27D33E7200F686E5 /* ContentsModel.swift */; };
 		765C9E1FF7E5310BD3B2B50F /* Pods_CreateMyResume_CreateMyResumeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E3A143A571B32F840853062 /* Pods_CreateMyResume_CreateMyResumeUITests.framework */; };
 		BC4E91511E8BD1F4EC4F6944 /* Pods_CreateMyResumeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CA8ABBBF574ADD327BA37CA /* Pods_CreateMyResumeTests.framework */; };
 		FD81D233E0360410BFE7D627 /* Pods_CreateMyResume.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43B26C8FF095B7AD625CDF9C /* Pods_CreateMyResume.framework */; };
@@ -104,6 +113,16 @@
 		728E2BC727D39FFC00CD00BE /* AddWorkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkModel.swift; sourceTree = "<group>"; };
 		728E2BD027D3AB2400CD00BE /* CompanyDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		728E2C3627D3BB5300CD00BE /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		729CB02427D7499D00F81462 /* ResumeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeViewModelTests.swift; sourceTree = "<group>"; };
+		729CB07027D758B500F81462 /* AboutViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewModelTests.swift; sourceTree = "<group>"; };
+		729CB08227D762CF00F81462 /* ContentsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentsViewModelTests.swift; sourceTree = "<group>"; };
+		729CB08F27D76F5D00F81462 /* ContactViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewModelTests.swift; sourceTree = "<group>"; };
+		729CB09427D76F8100F81462 /* CareerObjectiveViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerObjectiveViewModelTests.swift; sourceTree = "<group>"; };
+		729CB09927D76F8F00F81462 /* WorkViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkViewModelTests.swift; sourceTree = "<group>"; };
+		729CB09E27D76F9A00F81462 /* SkillsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsViewModelTests.swift; sourceTree = "<group>"; };
+		729CB0A327D76FA800F81462 /* EducationViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationViewModelTests.swift; sourceTree = "<group>"; };
+		729CB0A827D76FB600F81462 /* ProjectDetailsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailsViewModelTests.swift; sourceTree = "<group>"; };
+		729CB0B127D7798600F81462 /* PDFResumeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFResumeViewModelTests.swift; sourceTree = "<group>"; };
 		729F98F127D375470033A2D3 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		729F98F627D375610033A2D3 /* AboutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewModel.swift; sourceTree = "<group>"; };
 		729F98FB27D375770033A2D3 /* AboutModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutModel.swift; sourceTree = "<group>"; };
@@ -146,7 +165,6 @@
 		72EEC85027D3376E00F686E5 /* ResumeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeModel.swift; sourceTree = "<group>"; };
 		72EEC85927D33E7200F686E5 /* ContentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentsViewController.swift; sourceTree = "<group>"; };
 		72EEC85A27D33E7200F686E5 /* ContentsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentsViewModel.swift; sourceTree = "<group>"; };
-		72EEC85B27D33E7200F686E5 /* ContentsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentsModel.swift; sourceTree = "<group>"; };
 		846B60F2FA22AF958DCB741E /* Pods-CreateMyResumeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CreateMyResumeTests.release.xcconfig"; path = "Target Support Files/Pods-CreateMyResumeTests/Pods-CreateMyResumeTests.release.xcconfig"; sourceTree = "<group>"; };
 		892978C0C55CB555254EBFE9 /* Pods-CreateMyResume.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CreateMyResume.debug.xcconfig"; path = "Target Support Files/Pods-CreateMyResume/Pods-CreateMyResume.debug.xcconfig"; sourceTree = "<group>"; };
 		9AD408F929750D8D06612027 /* Pods-CreateMyResume-CreateMyResumeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CreateMyResume-CreateMyResumeUITests.debug.xcconfig"; path = "Target Support Files/Pods-CreateMyResume-CreateMyResumeUITests/Pods-CreateMyResume-CreateMyResumeUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -240,14 +258,14 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
-		7224F45027D4D50600A6728B /* PDF */ = {
+		7224F45027D4D50600A6728B /* PDFResume */ = {
 			isa = PBXGroup;
 			children = (
 				7224F45E27D4EB4200A6728B /* PDFResumeViewModel.swift */,
 				7224F45427D4D54100A6728B /* PDFResumeViewController.swift */,
 				7224F45927D4D6EC00A6728B /* PDFPreviewViewController.swift */,
 			);
-			path = PDF;
+			path = PDFResume;
 			sourceTree = "<group>";
 		};
 		728E2BBC27D39E5800CD00BE /* AddWork */ = {
@@ -266,6 +284,86 @@
 				728E2BD027D3AB2400CD00BE /* CompanyDetailsTableViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		729CB02327D7491200F81462 /* Resume */ = {
+			isa = PBXGroup;
+			children = (
+				729CB02427D7499D00F81462 /* ResumeViewModelTests.swift */,
+			);
+			path = Resume;
+			sourceTree = "<group>";
+		};
+		729CB06F27D7587300F81462 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				729CB07027D758B500F81462 /* AboutViewModelTests.swift */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
+		729CB07B27D7625F00F81462 /* Contents */ = {
+			isa = PBXGroup;
+			children = (
+				729CB08227D762CF00F81462 /* ContentsViewModelTests.swift */,
+			);
+			path = Contents;
+			sourceTree = "<group>";
+		};
+		729CB07C27D7626C00F81462 /* ProjectDetails */ = {
+			isa = PBXGroup;
+			children = (
+				729CB0A827D76FB600F81462 /* ProjectDetailsViewModelTests.swift */,
+			);
+			path = ProjectDetails;
+			sourceTree = "<group>";
+		};
+		729CB07D27D7627600F81462 /* Education */ = {
+			isa = PBXGroup;
+			children = (
+				729CB0A327D76FA800F81462 /* EducationViewModelTests.swift */,
+			);
+			path = Education;
+			sourceTree = "<group>";
+		};
+		729CB07E27D7627F00F81462 /* Skills */ = {
+			isa = PBXGroup;
+			children = (
+				729CB09E27D76F9A00F81462 /* SkillsViewModelTests.swift */,
+			);
+			path = Skills;
+			sourceTree = "<group>";
+		};
+		729CB07F27D7628800F81462 /* Work */ = {
+			isa = PBXGroup;
+			children = (
+				729CB09927D76F8F00F81462 /* WorkViewModelTests.swift */,
+			);
+			path = Work;
+			sourceTree = "<group>";
+		};
+		729CB08027D7628D00F81462 /* CareerObjective */ = {
+			isa = PBXGroup;
+			children = (
+				729CB09427D76F8100F81462 /* CareerObjectiveViewModelTests.swift */,
+			);
+			path = CareerObjective;
+			sourceTree = "<group>";
+		};
+		729CB08127D762A600F81462 /* Contact */ = {
+			isa = PBXGroup;
+			children = (
+				729CB08F27D76F5D00F81462 /* ContactViewModelTests.swift */,
+			);
+			path = Contact;
+			sourceTree = "<group>";
+		};
+		729CB0AD27D7794800F81462 /* PDFResume */ = {
+			isa = PBXGroup;
+			children = (
+				729CB0B127D7798600F81462 /* PDFResumeViewModelTests.swift */,
+			);
+			path = PDFResume;
 			sourceTree = "<group>";
 		};
 		729F98F027D3751D0033A2D3 /* About */ = {
@@ -386,6 +484,16 @@
 			isa = PBXGroup;
 			children = (
 				72EEC81027D32B6D00F686E5 /* CreateMyResumeTests.swift */,
+				729CB02327D7491200F81462 /* Resume */,
+				729CB07B27D7625F00F81462 /* Contents */,
+				729CB06F27D7587300F81462 /* About */,
+				729CB08127D762A600F81462 /* Contact */,
+				729CB08027D7628D00F81462 /* CareerObjective */,
+				729CB07F27D7628800F81462 /* Work */,
+				729CB07E27D7627F00F81462 /* Skills */,
+				729CB07D27D7627600F81462 /* Education */,
+				729CB07C27D7626C00F81462 /* ProjectDetails */,
+				729CB0AD27D7794800F81462 /* PDFResume */,
 				72EEC81227D32B6D00F686E5 /* Info.plist */,
 			);
 			path = CreateMyResumeTests;
@@ -412,7 +520,7 @@
 				729F992427D395450033A2D3 /* Skills */,
 				729F992527D395450033A2D3 /* Education */,
 				729F992627D395450033A2D3 /* ProjectDetails */,
-				7224F45027D4D50600A6728B /* PDF */,
+				7224F45027D4D50600A6728B /* PDFResume */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -441,7 +549,6 @@
 		72EEC85827D33E1E00F686E5 /* Contents */ = {
 			isa = PBXGroup;
 			children = (
-				72EEC85B27D33E7200F686E5 /* ContentsModel.swift */,
 				72EEC85A27D33E7200F686E5 /* ContentsViewModel.swift */,
 				72EEC85927D33E7200F686E5 /* ContentsViewController.swift */,
 			);
@@ -726,7 +833,6 @@
 				729F993727D395450033A2D3 /* WorkModel.swift in Sources */,
 				729F993227D395450033A2D3 /* CareerObjectiveViewController.swift in Sources */,
 				7224F45527D4D54100A6728B /* PDFResumeViewController.swift in Sources */,
-				72EEC85E27D33E7200F686E5 /* ContentsModel.swift in Sources */,
 				729F996527D395450033A2D3 /* ProjectDetailsModel.swift in Sources */,
 				72EEC84C27D3375200F686E5 /* ResumeViewModel.swift in Sources */,
 				728E2BD127D3AB2400CD00BE /* CompanyDetailsTableViewCell.swift in Sources */,
@@ -752,7 +858,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				729CB08327D762CF00F81462 /* ContentsViewModelTests.swift in Sources */,
+				729CB09A27D76F8F00F81462 /* WorkViewModelTests.swift in Sources */,
+				729CB07127D758B500F81462 /* AboutViewModelTests.swift in Sources */,
+				729CB0A427D76FA800F81462 /* EducationViewModelTests.swift in Sources */,
+				729CB09527D76F8100F81462 /* CareerObjectiveViewModelTests.swift in Sources */,
+				729CB0B227D7798600F81462 /* PDFResumeViewModelTests.swift in Sources */,
+				729CB0A927D76FB600F81462 /* ProjectDetailsViewModelTests.swift in Sources */,
+				729CB09027D76F5D00F81462 /* ContactViewModelTests.swift in Sources */,
 				72EEC81127D32B6D00F686E5 /* CreateMyResumeTests.swift in Sources */,
+				729CB09F27D76F9A00F81462 /* SkillsViewModelTests.swift in Sources */,
+				729CB02527D7499D00F81462 /* ResumeViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

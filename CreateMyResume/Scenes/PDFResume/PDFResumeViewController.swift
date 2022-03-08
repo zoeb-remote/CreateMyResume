@@ -2,7 +2,7 @@
 //  PDFResumeViewController.swift
 //  CreateMyResume
 //
-//  Created by Bigsur on 06/03/22.
+//  Created by Zoeb on 06/03/22.
 //
 
 import UIKit
@@ -160,7 +160,6 @@ class PDFResumeViewController: UIViewController {
                 projectDetailsStackView.addArrangedSubview(finalStackView)
             }
         }
-        
     }
     
     func createStackView(views: [UIView], axis: NSLayoutConstraint.Axis = .horizontal) -> UIStackView {
