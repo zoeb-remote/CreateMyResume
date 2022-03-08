@@ -12,10 +12,18 @@ class ResumeViewModelTests: XCTestCase
 {
     class MockResumeViewModel: ResumeViewModel {
         private var reumeModel: MockResumeModel?
+        static var readResumeWasCalled = false
+        
         override var resumes: [ResumeModel]? {
+            let _ = MockResumeViewModel.readResumes()
             guard let reumeModel = self.reumeModel else { return nil }
             
             return [reumeModel]
+        }
+        
+        override static func readResumes(for resumeId: String? = nil) -> [ResumeModel]? {
+            readResumeWasCalled = true
+            return nil
         }
         
         func updateResume(resume: MockResumeModel) {
@@ -58,6 +66,13 @@ class ResumeViewModelTests: XCTestCase
         sut.updateResume(resume: resume)
         
         XCTAssertEqual(sut.resumesCount, 1, "resumesCount should be 1")
+    }
+    
+    func testReadResumesCall()
+    {
+        let _ = sut.resumes
+        
+        XCTAssertTrue(MockResumeViewModel.readResumeWasCalled, "readResumeWasCalled should be true")
     }
     
     func testResumeInfo() {

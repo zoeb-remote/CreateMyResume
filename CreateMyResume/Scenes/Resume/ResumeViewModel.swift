@@ -11,18 +11,18 @@ class ResumeViewModel {
     var resumes: [ResumeModel]? {
         return ResumeViewModel.readResumes()
     }
+    
     var resumesCount: Int {
         resumes?.count ?? 0
     }
+    
     enum Constants {
         static let cellIdentifier = "ResumeTableViewCell"
         static let addContentsViewControllerIdentifier = "AddContentsViewControllerIdentifier"
         static let modifyContentsViewControllerIdentifier = "ModifyContentsViewControllerIdentifier"
     }
-}
-
-extension ResumeViewModel {
-    static func readResumes(for resumeId: String? = nil) -> [ResumeModel]? {
+    
+    class func readResumes(for resumeId: String? = nil) -> [ResumeModel]? {
         //array of resume model [resume model]
         // Read/Get Data
         if let data = UserDefaults.standard.data(forKey: "resumesKey") {
@@ -52,7 +52,7 @@ extension ResumeViewModel {
         return nil
     }
     
-    static func writeResume(_ resume: ResumeModel) {
+    class func writeResume(_ resume: ResumeModel) {
         resume.title = resume.about.firstName + " " + resume.about.lastName
         
         var resumes = ResumeViewModel.readResumes() ?? [ResumeModel]()
