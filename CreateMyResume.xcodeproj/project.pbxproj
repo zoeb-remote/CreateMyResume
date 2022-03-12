@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7202CF6C27DC82E900BD03CD /* DispatchQueueExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7202CF6B27DC82E900BD03CD /* DispatchQueueExtension.swift */; };
+		7202CF6E27DC916500BD03CD /* TextValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7202CF6D27DC916500BD03CD /* TextValidation.swift */; };
 		7224F3FC27D491D700A6728B /* SkillsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7224F3FB27D491D700A6728B /* SkillsTableViewCell.swift */; };
 		7224F40327D49C7700A6728B /* EducationDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7224F40227D49C7700A6728B /* EducationDetailsTableViewCell.swift */; };
 		7224F40B27D49C9400A6728B /* AddEducationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7224F40A27D49C9400A6728B /* AddEducationViewController.swift */; };
@@ -98,6 +99,7 @@
 		43B26C8FF095B7AD625CDF9C /* Pods_CreateMyResume.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CreateMyResume.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		49C412177255B3605E7175DD /* Pods-CreateMyResume.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CreateMyResume.release.xcconfig"; path = "Target Support Files/Pods-CreateMyResume/Pods-CreateMyResume.release.xcconfig"; sourceTree = "<group>"; };
 		7202CF6B27DC82E900BD03CD /* DispatchQueueExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueueExtension.swift; sourceTree = "<group>"; };
+		7202CF6D27DC916500BD03CD /* TextValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextValidation.swift; sourceTree = "<group>"; };
 		7224F3FB27D491D700A6728B /* SkillsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsTableViewCell.swift; sourceTree = "<group>"; };
 		7224F40227D49C7700A6728B /* EducationDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		7224F40A27D49C9400A6728B /* AddEducationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEducationViewController.swift; sourceTree = "<group>"; };
@@ -545,6 +547,7 @@
 				729F990327D381120033A2D3 /* UIViewExtension.swift */,
 				728E2C3627D3BB5300CD00BE /* UIViewControllerExtension.swift */,
 				7202CF6B27DC82E900BD03CD /* DispatchQueueExtension.swift */,
+				7202CF6D27DC916500BD03CD /* TextValidation.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -817,6 +820,7 @@
 				729F995527D395450033A2D3 /* EducationModel.swift in Sources */,
 				729F993C27D395450033A2D3 /* WorkViewModel.swift in Sources */,
 				7224F43427D4AA5800A6728B /* AddProjectViewModel.swift in Sources */,
+				7202CF6E27DC916500BD03CD /* TextValidation.swift in Sources */,
 				729F995027D395450033A2D3 /* SkillsViewController.swift in Sources */,
 				729F994627D395450033A2D3 /* SkillsModel.swift in Sources */,
 				729F991B27D395450033A2D3 /* ContactModel.swift in Sources */,
