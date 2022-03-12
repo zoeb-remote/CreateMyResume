@@ -16,6 +16,10 @@ public enum ValidatorType: String {
 
 @IBDesignable public class ValidatorTextField: UITextField {
     @IBInspectable var regex: String = ValidatorType.none.rawValue
+    private enum Constants {
+        static let emptyMessage = " should not be empty"
+        static let requiredField = "Required field"
+    }
     
     var isValidEmail: Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
@@ -29,10 +33,16 @@ public enum ValidatorType: String {
         let phonePredicate = NSPredicate(format: "SELF MATCHES %@", phoneRegex)
         return phonePredicate.evaluate(with: self.text)
     }
+    
+    var emptyMessage: String {
+        return (self.placeholder ?? Constants.requiredField) + Constants.emptyMessage
+    }
 }
 
 @IBDesignable public class ValidatorTextView: UITextView {
     @IBInspectable var regex: String = ValidatorType.none.rawValue
+    
+    let emptyMessage = "Career Objective should not be empty"
 }
 
 @IBDesignable public class BaseViewController: UIViewController {
@@ -63,7 +73,7 @@ public enum ValidatorType: String {
                         }
                     case ValidatorType.nonEmpty.rawValue:
                         if validatorFieldText.isEmpty {
-                            showAlert()
+                            showAlert(message: validatorField.emptyMessage)
                             validatorField.becomeFirstResponder()
                             return false
                         }
@@ -79,7 +89,7 @@ public enum ValidatorType: String {
                 switch validatorField.regex {
                 case ValidatorType.nonEmpty.rawValue:
                     if validatorField.text.isEmpty {
-                        showAlert()
+                        showAlert(message: validatorField.emptyMessage)
                         validatorField.becomeFirstResponder()
                         return false
                     }
