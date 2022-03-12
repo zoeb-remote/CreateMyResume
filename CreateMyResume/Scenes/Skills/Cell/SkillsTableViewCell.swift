@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol SkillsTableViewProtocol: class {
+protocol SkillsTableViewProtocol: AnyObject {
     func didRemoveSkill(skillIndex: Int)
 }
 
@@ -27,7 +27,7 @@ class SkillsTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    @IBAction func deleteButtonTapped(_ sender: UIButton) {
+    @IBAction private func deleteButtonTapped(_ sender: UIButton) {
         delegate?.didRemoveSkill(skillIndex: skillIndex)
     }
 

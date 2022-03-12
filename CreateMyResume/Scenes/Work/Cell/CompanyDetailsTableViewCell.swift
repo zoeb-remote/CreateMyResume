@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol CompanyDetailsViewProtocol: class {
+protocol CompanyDetailsViewProtocol: AnyObject {
     func didRemoveCompany(companyIndex: Int)
 }
 
@@ -28,7 +28,7 @@ class CompanyDetailsTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    @IBAction func deleteButtonTapped(_ sender: UIButton) {
+    @IBAction private func deleteButtonTapped(_ sender: UIButton) {
         delegate?.didRemoveCompany(companyIndex: companyIndex)
     }
 

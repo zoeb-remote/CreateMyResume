@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol ProjectDetailsTableViewCellProtocol: class {
+protocol ProjectDetailsTableViewCellProtocol: AnyObject {
     func didRemoveProject(projectIndex: Int)
 }
 
@@ -32,7 +32,7 @@ class ProjectDetailsTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    @IBAction func deleteButtonTapped(_ sender: UIButton) {
+    @IBAction private func deleteButtonTapped(_ sender: UIButton) {
         delegate?.didRemoveProject(projectIndex: projectIndex)
     }
 

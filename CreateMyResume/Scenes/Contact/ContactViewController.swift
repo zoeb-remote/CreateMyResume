@@ -26,7 +26,7 @@ class ContactViewController: UIViewController {
         addressTextField.text = viewModel.contentModel.address
     }
     
-    @IBAction func nextButtonTapped(_ sender: UIButton) {
+    @IBAction private func nextButtonTapped(_ sender: UIButton) {
         viewModel.contentModel.mobile = phoneTextField.text ?? ""
         viewModel.contentModel.email = emailTextField.text ?? ""
         viewModel.contentModel.address = addressTextField.text ?? ""

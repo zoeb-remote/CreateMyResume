@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gey-Qn-Kht">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gey-Qn-Kht">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -36,10 +37,10 @@ Tap “+” button to continue</string>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ResumeTableViewCell" id="s8k-Hn-bIB">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="375" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="s8k-Hn-bIB" id="U9x-8H-AlY">
-                                            <rect key="frame" x="0.0" y="0.0" width="348" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="349.5" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -307,10 +308,10 @@ Tap “+” button to continue</string>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ContentsTableViewCell" id="axt-Ty-C86" userLabel="ContentsTableViewCell">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="375" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="axt-Ty-C86" id="1k3-hS-mJ0">
-                                            <rect key="frame" x="0.0" y="0.0" width="348" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="349.5" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -373,27 +374,6 @@ Tap “+” button to continue</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="982"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K1r-dk-fEc">
-                                <rect key="frame" x="50" y="882" width="275" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="ME5-38-0b2"/>
-                                </constraints>
-                                <state key="normal" title="Preview"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="1" green="0.87014429640000002" blue="0.034418221810000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="20"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="generateSamplePDFFromViews:" destination="eHu-eu-Ql7" eventType="touchUpInside" id="onv-J5-i9D"/>
-                                </connections>
-                            </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qea-er-l31">
                                 <rect key="frame" x="0.0" y="44" width="375" height="788"/>
                                 <subviews>
@@ -603,6 +583,27 @@ Tap “+” button to continue</string>
                                     <constraint firstItem="HTf-P2-BQo" firstAttribute="leading" secondItem="Qea-er-l31" secondAttribute="leading" id="zwO-15-4XE"/>
                                 </constraints>
                             </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K1r-dk-fEc">
+                                <rect key="frame" x="50" y="882" width="275" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ME5-38-0b2"/>
+                                </constraints>
+                                <state key="normal" title="Preview"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="1" green="0.87014429640000002" blue="0.034418221810000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="generateSamplePDFFromViews:" destination="eHu-eu-Ql7" eventType="touchUpInside" id="onv-J5-i9D"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="k1m-oD-ZXV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -623,15 +624,21 @@ Tap “+” button to continue</string>
                         <outlet property="addressLabel" destination="eFn-6E-mMS" id="nmH-bg-nMS"/>
                         <outlet property="careerObjectiveLabel" destination="PJU-Ok-70P" id="AFx-AI-aXY"/>
                         <outlet property="contentView" destination="HTf-P2-BQo" id="eHg-Kv-DGU"/>
+                        <outlet property="educationBorderView" destination="pFy-fE-xwe" id="djw-1Q-gbY"/>
                         <outlet property="educationStackView" destination="0hA-gb-sjx" id="Ygv-FP-Zu3"/>
+                        <outlet property="educationTitleLabel" destination="PWw-zC-V8Z" id="eps-jt-Jje"/>
                         <outlet property="emailLabel" destination="8px-Mn-8dR" id="q8r-Xn-lwm"/>
                         <outlet property="experienceLabel" destination="njX-rl-USs" id="SaA-a7-ltQ"/>
                         <outlet property="experienceStackView" destination="Exk-vI-15f" id="wzN-9o-Jgs"/>
                         <outlet property="imageView" destination="pzG-fy-Czp" id="eLs-YN-0re"/>
                         <outlet property="nameLabel" destination="bnx-uY-wxx" id="ZgT-9U-ZWS"/>
                         <outlet property="phoneLabel" destination="kbK-qZ-E7a" id="qNf-Cd-ygj"/>
+                        <outlet property="projectDetailsBorderView" destination="WGT-qC-YL2" id="Axg-qc-kNe"/>
                         <outlet property="projectDetailsStackView" destination="jhH-GH-dH5" id="D1a-xQ-nL2"/>
+                        <outlet property="projectDetailsTitleLabel" destination="9Do-FA-12D" id="Bch-EP-lvj"/>
+                        <outlet property="skillsBorderView" destination="mP3-Zy-nGg" id="agh-RJ-qCj"/>
                         <outlet property="skillsLabel" destination="ezm-2d-IB8" id="ixw-Jl-R2j"/>
+                        <outlet property="skillsTitleLabel" destination="FqP-QJ-NXX" id="6dK-Vd-Wxb"/>
                         <segue destination="ADy-W0-Gu0" kind="show" identifier="PreviewVC" id="Sup-8E-RHX"/>
                     </connections>
                 </viewController>
@@ -787,7 +794,7 @@ the specifics you wish to attain via professional work.</string>
                                                 </constraints>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CompanyDetailsTableViewCellIdentifier" id="UQO-K6-X6b" customClass="CompanyDetailsTableViewCell" customModule="CreateMyResume" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="28" width="315" height="124"/>
+                                                        <rect key="frame" x="0.0" y="44.5" width="315" height="124"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UQO-K6-X6b" id="bXp-wL-dpH">
                                                             <rect key="frame" x="0.0" y="0.0" width="315" height="124"/>
@@ -963,7 +970,7 @@ the specifics you wish to attain via professional work.</string>
             <objects>
                 <viewController id="q51-Vi-ehW" userLabel="Add Work" customClass="AddWorkViewController" customModule="CreateMyResume" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="In0-4h-DtK">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your work experience" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgL-Qs-WLk">
@@ -1094,7 +1101,7 @@ the specifics you wish to attain via professional work.</string>
                                                 </constraints>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SkillsTableViewCellIdentifier" id="G1p-eH-qjP" customClass="SkillsTableViewCell" customModule="CreateMyResume" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="28" width="315" height="86"/>
+                                                        <rect key="frame" x="0.0" y="44.5" width="315" height="86"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="G1p-eH-qjP" id="J2y-qh-Pch">
                                                             <rect key="frame" x="0.0" y="0.0" width="315" height="86"/>
@@ -1287,7 +1294,7 @@ the specifics you wish to attain via professional work.</string>
                                                 </constraints>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EducationDetailsTableViewCellIdentifier" id="OUU-iP-Lgg" customClass="EducationDetailsTableViewCell" customModule="CreateMyResume" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="28" width="315" height="124"/>
+                                                        <rect key="frame" x="0.0" y="44.5" width="315" height="124"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OUU-iP-Lgg" id="CGB-1H-23c">
                                                             <rect key="frame" x="0.0" y="0.0" width="315" height="124"/>
@@ -1577,7 +1584,7 @@ the specifics you wish to attain via professional work.</string>
                                                 </constraints>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProjectDetailsTableViewCellIdentifier" id="Jau-72-oSQ" customClass="ProjectDetailsTableViewCell" customModule="CreateMyResume" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="28" width="315" height="219"/>
+                                                        <rect key="frame" x="0.0" y="44.5" width="315" height="219"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Jau-72-oSQ" id="NNw-J2-hyh">
                                                             <rect key="frame" x="0.0" y="0.0" width="315" height="219"/>

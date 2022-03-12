@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol AddEducationViewControllerProtocol: class {
+protocol AddEducationViewControllerProtocol: AnyObject {
     func didAddEducation(model: AddEducationViewModel)
 }
 
@@ -24,7 +24,7 @@ class AddEducationViewController: UIViewController {
 
     }
     
-    @IBAction func saveButtonTapped(_ sender: UIButton) {
+    @IBAction private func saveButtonTapped(_ sender: UIButton) {
         viewModel.contentModel.classDetails = classTextField.text ?? ""
         viewModel.contentModel.passingYear = Int(passingYearTextField.text ?? "1990") ?? 1990
         viewModel.contentModel.percentage = Double(percentageTextField.text ?? "0") ?? 0

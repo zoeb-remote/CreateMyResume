@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol AddWorkViewControllerProtocol: class {
+protocol AddWorkViewControllerProtocol: AnyObject {
     func didAddWork(model: AddWorkViewModel)
 }
 
@@ -24,7 +24,7 @@ class AddWorkViewController: UIViewController {
 
     }
     
-    @IBAction func saveButtonTapped(_ sender: UIButton) {
+    @IBAction private func saveButtonTapped(_ sender: UIButton) {
         viewModel.contentModel.companyName = companyTextField.text ?? ""
         viewModel.contentModel.duration = durationTextField.text ?? ""
         viewModel.contentModel.isCurrentCompany = isCurrentCompanySwitch.isOn

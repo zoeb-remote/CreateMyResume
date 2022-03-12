@@ -35,7 +35,7 @@ class EducationViewController: UIViewController {
         self.tableView.reloadData()
     }
     
-    @IBAction func nextButtonTapped(_ sender: UIButton) {
+    @IBAction private func nextButtonTapped(_ sender: UIButton) {
         delegate?.performNext(identifier: ContentsViewModel.SegueIdentifier.projectDetails.rawValue)
     }
     

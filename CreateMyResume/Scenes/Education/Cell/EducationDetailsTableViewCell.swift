@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol EducationDetailsTableViewCellProtocol: class {
+protocol EducationDetailsTableViewCellProtocol: AnyObject {
     func didRemoveEducation(educationIndex: Int)
 }
 
@@ -28,7 +28,7 @@ class EducationDetailsTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    @IBAction func deleteButtonTapped(_ sender: UIButton) {
+    @IBAction private func deleteButtonTapped(_ sender: UIButton) {
         delegate?.didRemoveEducation(educationIndex: educationIndex)
     }
 

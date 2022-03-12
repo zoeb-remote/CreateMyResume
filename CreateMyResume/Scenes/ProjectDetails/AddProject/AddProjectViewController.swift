@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol AddProjectViewControllerProtocol: class {
+protocol AddProjectViewControllerProtocol: AnyObject {
     func didAddProject(model: AddProjectViewModel)
 }
 
@@ -26,7 +26,7 @@ class AddProjectViewController: UIViewController {
 
     }
     
-    @IBAction func saveButtonTapped(_ sender: UIButton) {
+    @IBAction private func saveButtonTapped(_ sender: UIButton) {
         viewModel.contentModel.projectName = projectNameTextField.text ?? ""
         viewModel.contentModel.teamSize = Int(teamSizeTextField.text ?? "1") ?? 1
         viewModel.contentModel.summary = summaryTextField.text ?? ""

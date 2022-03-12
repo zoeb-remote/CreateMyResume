@@ -37,7 +37,7 @@ class WorkViewController: UIViewController {
         self.tableView.reloadData()
     }
     
-    @IBAction func nextButtonTapped(_ sender: UIButton) {
+    @IBAction private func nextButtonTapped(_ sender: UIButton) {
         viewModel.contentModel.totalExperience = totalExperienceTextField.text ?? ""
         delegate?.performNext(identifier: ContentsViewModel.SegueIdentifier.skills.rawValue)
     }

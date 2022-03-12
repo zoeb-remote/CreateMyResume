@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol NextActionProtocol: class {
+protocol NextActionProtocol: AnyObject {
     func performNext(identifier: String)
 }
 
@@ -26,21 +26,25 @@ class AboutViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        DispatchQueue.main.async {
-            self.firstNameTextField.text = self.viewModel.contentModel.firstName
-            self.lastNameTextField.text = self.viewModel.contentModel.lastName
-            self.userImageButton.setImage(self.viewModel.userImage, for: .normal)
-        }
-        
-        imagePicker = ImagePicker(presentationController: self, delegate: self)
+        setup()
     }
     
-    @IBAction func addPhotoButtonTapped(_ sender: UIButton) {
+    private func setup() {
+        self.firstNameTextField.text = self.viewModel.contentModel.firstName
+        self.lastNameTextField.text = self.viewModel.contentModel.lastName
+        self.userImageButton.setImage(self.viewModel.userImage, for: .normal)
+        
+        DispatchQueue.background(completion: {
+            self.imagePicker = ImagePicker(presentationController: self, delegate: self)
+        })
+    }
+    
+    @IBAction private func addPhotoButtonTapped(_ sender: UIButton) {
         
         self.imagePicker.present(from: userImageButton)
     }
     
-    @IBAction func nextButtonTapped(_ sender: UIButton) {
+    @IBAction private func nextButtonTapped(_ sender: UIButton) {
         viewModel.contentModel.firstName = firstNameTextField.text ?? ""
         viewModel.contentModel.lastName = lastNameTextField.text ?? ""
         delegate?.performNext(identifier: ContentsViewModel.SegueIdentifier.contact.rawValue)

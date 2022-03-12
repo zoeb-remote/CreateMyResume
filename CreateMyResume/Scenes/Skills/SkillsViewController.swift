@@ -24,11 +24,11 @@ class SkillsViewController: UIViewController {
         refresh()
     }
     
-    @IBAction func nextButtonTapped(_ sender: UIButton) {
+    @IBAction private func nextButtonTapped(_ sender: UIButton) {
         delegate?.performNext(identifier: ContentsViewModel.SegueIdentifier.education.rawValue)
     }
     
-    @IBAction func addButtonTapped(_ sender: UIButton) {
+    @IBAction private func addButtonTapped(_ sender: UIButton) {
         if let skill = skillsTextField.text, skill.isEmpty == false {
             didAddSkill(skill)
             skillsTextField.text = ""

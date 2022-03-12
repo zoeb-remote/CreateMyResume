@@ -22,6 +22,7 @@ struct PDFResumeViewModel {
         static let teamSizeKey = "Team Size"
         static let technologyUsedKey = "Technology used: "
         static let roleKey = "Role: "
+        static let fresherKey = "Fresher"
         static let systemFont = UIFont.systemFont(ofSize: 15.0)
         static let systemFontMedium = UIFont.systemFont(ofSize: 15, weight: .medium)
     }
