@@ -11,9 +11,9 @@ protocol AddWorkViewControllerProtocol: AnyObject {
     func didAddWork(model: AddWorkViewModel)
 }
 
-class AddWorkViewController: UIViewController {
-    @IBOutlet private weak var companyTextField: UITextField!
-    @IBOutlet private weak var durationTextField: UITextField!
+class AddWorkViewController: BaseViewController {
+    @IBOutlet private weak var companyTextField: ValidatorTextField!
+    @IBOutlet private weak var durationTextField: ValidatorTextField!
     @IBOutlet private weak var isCurrentCompanySwitch: UISwitch!
     
     private lazy var viewModel = AddWorkViewModel(contentModel: AddWorkModel())
@@ -25,6 +25,8 @@ class AddWorkViewController: UIViewController {
     }
     
     @IBAction private func saveButtonTapped(_ sender: UIButton) {
+        guard isFormValid else { return }
+        
         viewModel.contentModel.companyName = companyTextField.text ?? ""
         viewModel.contentModel.duration = durationTextField.text ?? ""
         viewModel.contentModel.isCurrentCompany = isCurrentCompanySwitch.isOn

@@ -9,7 +9,7 @@
 import UIKit
 import WebKit
 
-class PDFPreviewViewController: UIViewController {
+class PDFPreviewViewController: BaseViewController {
 
     @IBOutlet private weak var webView: WKWebView!
     var url: URL!

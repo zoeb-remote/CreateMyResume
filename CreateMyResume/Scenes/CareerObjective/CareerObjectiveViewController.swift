@@ -7,9 +7,9 @@
 
 import UIKit
 
-class CareerObjectiveViewController: UIViewController {
+class CareerObjectiveViewController: BaseViewController {
     
-    @IBOutlet private weak var careerObjectiveTextView: UITextView!
+    @IBOutlet private weak var careerObjectiveTextView: ValidatorTextView!
     
     weak var delegate: NextActionProtocol?
     
@@ -23,6 +23,8 @@ class CareerObjectiveViewController: UIViewController {
     }
     
     @IBAction private func nextButtonTapped(_ sender: UIButton) {
+        guard isFormValid else { return }
+        
         viewModel.contentModel.objective = careerObjectiveTextView.text ?? ""
         delegate?.performNext(identifier: ContentsViewModel.SegueIdentifier.work.rawValue)
     }

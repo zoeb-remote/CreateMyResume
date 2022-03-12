@@ -11,10 +11,10 @@ protocol AddEducationViewControllerProtocol: AnyObject {
     func didAddEducation(model: AddEducationViewModel)
 }
 
-class AddEducationViewController: UIViewController {
-    @IBOutlet private weak var classTextField: UITextField!
-    @IBOutlet private weak var passingYearTextField: UITextField!
-    @IBOutlet private weak var percentageTextField: UITextField!
+class AddEducationViewController: BaseViewController {
+    @IBOutlet private weak var classTextField: ValidatorTextField!
+    @IBOutlet private weak var passingYearTextField: ValidatorTextField!
+    @IBOutlet private weak var percentageTextField: ValidatorTextField!
     
     private lazy var viewModel = AddEducationViewModel(contentModel: AddEducationModel())
     weak var delegate: AddEducationViewControllerProtocol?
@@ -25,6 +25,8 @@ class AddEducationViewController: UIViewController {
     }
     
     @IBAction private func saveButtonTapped(_ sender: UIButton) {
+        guard isFormValid else { return }
+        
         viewModel.contentModel.classDetails = classTextField.text ?? ""
         viewModel.contentModel.passingYear = Int(passingYearTextField.text ?? "1990") ?? 1990
         viewModel.contentModel.percentage = Double(percentageTextField.text ?? "0") ?? 0

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProjectDetailsViewController: UIViewController {
+class ProjectDetailsViewController: BaseViewController {
     
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var tableViewHeightLC: NSLayoutConstraint!
@@ -36,6 +36,8 @@ class ProjectDetailsViewController: UIViewController {
     }
     
     @IBAction private func nextButtonTapped(_ sender: UIButton) {
+        guard isFormValid else { return }
+        
         delegate?.performNext(identifier: ContentsViewModel.SegueIdentifier.pdfPreview.rawValue)
     }
     

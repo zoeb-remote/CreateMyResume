@@ -9,6 +9,14 @@ import UIKit
 
 extension UIViewController {
     
+    static var className: String {
+        return "\(self)"
+    }
+    
+    func showAlert(title: String = AlertViewController.kDefaultTitle, message: String = AlertViewController.kDefaultMessage) {
+        AlertViewController.sharedInstance.alertWindow(title: title, message: message, onVC: self)
+    }
+    
     func setupConstraintForChildViewController(childVC:UIViewController, containerView:UIView) {
         
         self.addChild(childVC)
@@ -22,9 +30,5 @@ extension UIViewController {
         containerView.addConstraints(vertConstraints)
         
         childVC.view.translatesAutoresizingMaskIntoConstraints = false
-    }
-    
-    static var className: String {
-        return "\(self)"
     }
 }

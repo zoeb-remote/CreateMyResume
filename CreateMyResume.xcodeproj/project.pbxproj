@@ -21,6 +21,7 @@
 		7224F45527D4D54100A6728B /* PDFResumeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7224F45427D4D54100A6728B /* PDFResumeViewController.swift */; };
 		7224F45A27D4D6EC00A6728B /* PDFPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7224F45927D4D6EC00A6728B /* PDFPreviewViewController.swift */; };
 		7224F45F27D4EB4200A6728B /* PDFResumeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7224F45E27D4EB4200A6728B /* PDFResumeViewModel.swift */; };
+		727D371127DCAC9600B9D2AB /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727D371027DCAC9600B9D2AB /* AlertViewController.swift */; };
 		728E2BBE27D39E6C00CD00BE /* AddWorkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728E2BBD27D39E6C00CD00BE /* AddWorkViewController.swift */; };
 		728E2BC327D39E8300CD00BE /* AddWorkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728E2BC227D39E8300CD00BE /* AddWorkViewModel.swift */; };
 		728E2BC827D39FFC00CD00BE /* AddWorkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728E2BC727D39FFC00CD00BE /* AddWorkModel.swift */; };
@@ -112,6 +113,7 @@
 		7224F45427D4D54100A6728B /* PDFResumeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFResumeViewController.swift; sourceTree = "<group>"; };
 		7224F45927D4D6EC00A6728B /* PDFPreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDFPreviewViewController.swift; sourceTree = "<group>"; };
 		7224F45E27D4EB4200A6728B /* PDFResumeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFResumeViewModel.swift; sourceTree = "<group>"; };
+		727D371027DCAC9600B9D2AB /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		728E2BBD27D39E6C00CD00BE /* AddWorkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkViewController.swift; sourceTree = "<group>"; };
 		728E2BC227D39E8300CD00BE /* AddWorkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkViewModel.swift; sourceTree = "<group>"; };
 		728E2BC727D39FFC00CD00BE /* AddWorkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkModel.swift; sourceTree = "<group>"; };
@@ -548,6 +550,7 @@
 				728E2C3627D3BB5300CD00BE /* UIViewControllerExtension.swift */,
 				7202CF6B27DC82E900BD03CD /* DispatchQueueExtension.swift */,
 				7202CF6D27DC916500BD03CD /* TextValidation.swift */,
+				727D371027DCAC9600B9D2AB /* AlertViewController.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -834,6 +837,7 @@
 				729F991327D395450033A2D3 /* ContactViewModel.swift in Sources */,
 				728E2BC827D39FFC00CD00BE /* AddWorkModel.swift in Sources */,
 				72EEC7FC27D32B6900F686E5 /* SceneDelegate.swift in Sources */,
+				727D371127DCAC9600B9D2AB /* AlertViewController.swift in Sources */,
 				7224F41027D49CA000A6728B /* AddEducationViewModel.swift in Sources */,
 				7224F40B27D49C9400A6728B /* AddEducationViewController.swift in Sources */,
 				7202CF6C27DC82E900BD03CD /* DispatchQueueExtension.swift in Sources */,

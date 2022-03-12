@@ -15,29 +15,76 @@ public enum ValidatorType: String {
 }
 
 @IBDesignable public class ValidatorTextField: UITextField {
-    @IBInspectable var regex: String?
+    @IBInspectable var regex: String = ValidatorType.none.rawValue
+    
+    var isValidEmail: Bool {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        
+        let emailPredicate = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailPredicate.evaluate(with: self.text)
+    }
+    
+    var isValidPhone: Bool {
+        let phoneRegex = "^[0-9+]{0,1}+[0-9]{5,16}$"
+        let phonePredicate = NSPredicate(format: "SELF MATCHES %@", phoneRegex)
+        return phonePredicate.evaluate(with: self.text)
+    }
 }
 
 @IBDesignable public class ValidatorTextView: UITextView {
-    @IBInspectable var regex: String?
+    @IBInspectable var regex: String = ValidatorType.none.rawValue
 }
 
 @IBDesignable public class BaseViewController: UIViewController {
-    @IBInspectable var validatorTextFields: [ValidatorTextField]?
-    @IBInspectable var validatorTextViews: [ValidatorTextView]?
+    @IBOutlet var validatorTextFields: [ValidatorTextField]?
+    @IBOutlet var validatorTextViews: [ValidatorTextView]?
+    
+    private enum Constants {
+        static let invalidEmailMessage = "Email should be valid"
+        static let invalidPhoneMessage = "Phone should be valid"
+    }
     
     var isFormValid: Bool {
         if let validatorTextFields = validatorTextFields {
-            for validator in validatorTextFields {
-                switch validator.regex {
-                case ValidatorType.email.rawValue:
-                    debugPrint(validator.regex ?? "EMPTY")
-                case ValidatorType.phone.rawValue:
-                    debugPrint(validator.regex ?? "EMPTY")
+            for validatorField in validatorTextFields {
+                if let validatorFieldText = validatorField.text {
+                    switch validatorField.regex {
+                    case ValidatorType.email.rawValue:
+                        if validatorFieldText.isEmpty || !validatorField.isValidEmail {
+                            showAlert(message: Constants.invalidEmailMessage)
+                            validatorField.becomeFirstResponder()
+                            return false
+                        }
+                    case ValidatorType.phone.rawValue:
+                        if validatorFieldText.isEmpty || !validatorField.isValidPhone {
+                            showAlert(message: Constants.invalidPhoneMessage)
+                            validatorField.becomeFirstResponder()
+                            return false
+                        }
+                    case ValidatorType.nonEmpty.rawValue:
+                        if validatorFieldText.isEmpty {
+                            showAlert()
+                            validatorField.becomeFirstResponder()
+                            return false
+                        }
+                    default:
+                        debugPrint(validatorField.regex)
+                    }
+                }
+            }
+        }
+        
+        if let validatorTextViews = validatorTextViews {
+            for validatorField in validatorTextViews {
+                switch validatorField.regex {
                 case ValidatorType.nonEmpty.rawValue:
-                    debugPrint(validator.regex ?? "EMPTY")
+                    if validatorField.text.isEmpty {
+                        showAlert()
+                        validatorField.becomeFirstResponder()
+                        return false
+                    }
                 default:
-                    debugPrint(validator.regex ?? "EMPTY")
+                    debugPrint(validatorField.regex)
                 }
             }
         }

@@ -117,15 +117,21 @@ Tap “+” button to continue</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qdw-lc-tf3">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qdw-lc-tf3" customClass="ValidatorTextField" customModule="CreateMyResume" customModuleProvider="target">
                                 <rect key="frame" x="30" y="423.5" width="315" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="regex" value="nonEmpty"/>
+                                </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4RU-cv-6os">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4RU-cv-6os" customClass="ValidatorTextField" customModule="CreateMyResume" customModuleProvider="target">
                                 <rect key="frame" x="30" y="477.5" width="315" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="regex" value="nonEmpty"/>
+                                </userDefinedRuntimeAttributes>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Usually only the first and last name is required, but feel free to include your middle name as part of the first name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F32-1s-qig">
                                 <rect key="frame" x="30" y="541.5" width="315" height="54"/>
@@ -188,6 +194,8 @@ Tap “+” button to continue</string>
                         <outlet property="firstNameTextField" destination="Qdw-lc-tf3" id="fha-WZ-XdW"/>
                         <outlet property="lastNameTextField" destination="4RU-cv-6os" id="KbW-hX-ZEZ"/>
                         <outlet property="userImageButton" destination="m8m-Xx-xmM" id="V1Z-RH-FLH"/>
+                        <outletCollection property="validatorTextFields" destination="Qdw-lc-tf3" collectionClass="NSMutableArray" id="im1-PZ-ciV"/>
+                        <outletCollection property="validatorTextFields" destination="4RU-cv-6os" collectionClass="NSMutableArray" id="VkH-wz-taI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="29h-hA-qxX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -214,15 +222,29 @@ Tap “+” button to continue</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7ol-17-lxn">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lrI-DW-mwu" customClass="ValidatorTextField" customModule="CreateMyResume" customModuleProvider="target">
+                                <rect key="frame" x="30" y="214" width="315" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="regex" value="phone"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7ol-17-lxn" customClass="ValidatorTextField" customModule="CreateMyResume" customModuleProvider="target">
                                 <rect key="frame" x="30" y="268" width="315" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="regex" value="email"/>
+                                </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Residential Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="san-Gh-jU1">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Residential Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="san-Gh-jU1" customClass="ValidatorTextField" customModule="CreateMyResume" customModuleProvider="target">
                                 <rect key="frame" x="30" y="322" width="315" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="regex" value="nonEmpty"/>
+                                </userDefinedRuntimeAttributes>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You'll most likely be contacted by a recruiter via email or phone number, so it's very important to include an email address." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2WK-KC-3L3">
                                 <rect key="frame" x="30" y="386" width="315" height="54"/>
@@ -252,11 +274,6 @@ Tap “+” button to continue</string>
                                     <action selector="nextButtonTapped:" destination="Asa-ce-n3S" eventType="touchUpInside" id="ALk-ne-Tgk"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lrI-DW-mwu">
-                                <rect key="frame" x="30" y="214" width="315" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
-                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="V6m-KM-h7u"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -289,6 +306,9 @@ Tap “+” button to continue</string>
                         <outlet property="addressTextField" destination="san-Gh-jU1" id="C7K-vh-KIy"/>
                         <outlet property="emailTextField" destination="7ol-17-lxn" id="Xiu-uv-S8m"/>
                         <outlet property="phoneTextField" destination="lrI-DW-mwu" id="aja-fY-IBa"/>
+                        <outletCollection property="validatorTextFields" destination="lrI-DW-mwu" collectionClass="NSMutableArray" id="ACw-xb-PUX"/>
+                        <outletCollection property="validatorTextFields" destination="7ol-17-lxn" collectionClass="NSMutableArray" id="BWT-hr-tVl"/>
+                        <outletCollection property="validatorTextFields" destination="san-Gh-jU1" collectionClass="NSMutableArray" id="lZv-7X-Kap"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C1r-tz-Hce" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -677,6 +697,25 @@ the specifics you wish to attain via professional work.</string>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kWq-ku-3Uv" customClass="ValidatorTextView" customModule="CreateMyResume" customModuleProvider="target">
+                                <rect key="frame" x="30" y="214" width="315" height="121.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="1" green="0.87014429640000002" blue="0.034418221810000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="regex" value="nonEmpty"/>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egg-N8-ViR">
                                 <rect key="frame" x="50" y="449.5" width="275" height="40"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
@@ -699,24 +738,6 @@ the specifics you wish to attain via professional work.</string>
                                     <action selector="nextButtonTapped:" destination="pyG-CX-iAg" eventType="touchUpInside" id="gNR-5X-XCB"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kWq-ku-3Uv">
-                                <rect key="frame" x="30" y="214" width="315" height="121.5"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="1" green="0.87014429640000002" blue="0.034418221810000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="S1Z-P7-ZQ6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -743,6 +764,7 @@ the specifics you wish to attain via professional work.</string>
                     <navigationItem key="navigationItem" title="Career Objective" id="46k-ct-6bu"/>
                     <connections>
                         <outlet property="careerObjectiveTextView" destination="kWq-ku-3Uv" id="1i5-BC-BJb"/>
+                        <outletCollection property="validatorTextViews" destination="kWq-ku-3Uv" collectionClass="NSMutableArray" id="3iA-yA-tzL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Jv-z1-3Zq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -775,7 +797,7 @@ the specifics you wish to attain via professional work.</string>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Total Experience" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ztr-fl-Whj">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Total Experience" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ztr-fl-Whj" customClass="ValidatorTextField" customModule="CreateMyResume" customModuleProvider="target">
                                                 <rect key="frame" x="30" y="149.5" width="315" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
@@ -959,6 +981,7 @@ the specifics you wish to attain via professional work.</string>
                         <outlet property="tableView" destination="YTa-9Q-spS" id="kYb-7M-qEP"/>
                         <outlet property="tableViewHeightLC" destination="cmR-kA-w7o" id="C2i-qj-cl8"/>
                         <outlet property="totalExperienceTextField" destination="ztr-fl-Whj" id="4aF-fn-ccC"/>
+                        <outletCollection property="validatorTextFields" destination="ztr-fl-Whj" collectionClass="NSMutableArray" id="fhr-ag-YL1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J7z-Z9-YfB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -970,7 +993,7 @@ the specifics you wish to attain via professional work.</string>
             <objects>
                 <viewController id="q51-Vi-ehW" userLabel="Add Work" customClass="AddWorkViewController" customModule="CreateMyResume" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="In0-4h-DtK">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your work experience" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgL-Qs-WLk">
@@ -985,10 +1008,21 @@ the specifics you wish to attain via professional work.</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Duration" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SG7-pR-ye7">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Company LLC." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gCK-Pu-hP5" customClass="ValidatorTextField" customModule="CreateMyResume" customModuleProvider="target">
+                                <rect key="frame" x="30" y="170" width="315" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="regex" value="nonEmpty"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Duration" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SG7-pR-ye7" customClass="ValidatorTextField" customModule="CreateMyResume" customModuleProvider="target">
                                 <rect key="frame" x="30" y="224" width="315" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="regex" value="nonEmpty"/>
+                                </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qKb-e9-Qxz">
                                 <rect key="frame" x="50" y="342.5" width="275" height="40"/>
@@ -1012,11 +1046,6 @@ the specifics you wish to attain via professional work.</string>
                                     <action selector="saveButtonTapped:" destination="q51-Vi-ehW" eventType="touchUpInside" id="Mma-Lz-mBg"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Company LLC." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gCK-Pu-hP5">
-                                <rect key="frame" x="30" y="170" width="315" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you still working here?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xlA-R3-ycg">
                                 <rect key="frame" x="30" y="288" width="179.5" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -1056,6 +1085,8 @@ the specifics you wish to attain via professional work.</string>
                         <outlet property="companyTextField" destination="gCK-Pu-hP5" id="01X-bX-bmQ"/>
                         <outlet property="durationTextField" destination="SG7-pR-ye7" id="p1f-WT-q9a"/>
                         <outlet property="isCurrentCompanySwitch" destination="hL2-gK-n5w" id="1fi-hH-FGV"/>
+                        <outletCollection property="validatorTextFields" destination="gCK-Pu-hP5" collectionClass="NSMutableArray" id="Q5u-Dn-dkR"/>
+                        <outletCollection property="validatorTextFields" destination="SG7-pR-ye7" collectionClass="NSMutableArray" id="L3t-6w-beF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gfk-KP-K1F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1088,7 +1119,7 @@ the specifics you wish to attain via professional work.</string>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ex.: Multi-tasking" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uzx-Vn-Fkx">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ex.: Multi-tasking" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uzx-Vn-Fkx" customClass="ValidatorTextField" customModule="CreateMyResume" customModuleProvider="target">
                                                 <rect key="frame" x="30" y="170" width="315" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -1254,6 +1285,7 @@ the specifics you wish to attain via professional work.</string>
                         <outlet property="skillsTextField" destination="Uzx-Vn-Fkx" id="QC0-pn-SRF"/>
                         <outlet property="tableView" destination="ayz-oQ-OZI" id="1bP-jk-nY7"/>
                         <outlet property="tableViewHeightLC" destination="Np4-Cu-fef" id="ao9-MT-t3S"/>
+                        <outletCollection property="validatorTextFields" destination="Uzx-Vn-Fkx" collectionClass="NSMutableArray" id="rVA-9p-nac"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Okf-EG-SQ0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1478,20 +1510,29 @@ the specifics you wish to attain via professional work.</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Class (X, XII, Graduation)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KmA-Wc-GaP">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Class (X, XII, Graduation)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KmA-Wc-GaP" customClass="ValidatorTextField" customModule="CreateMyResume" customModuleProvider="target">
                                 <rect key="frame" x="30" y="170" width="315" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="regex" value="nonEmpty"/>
+                                </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Passing year" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qqk-0v-y4i">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Passing year" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qqk-0v-y4i" customClass="ValidatorTextField" customModule="CreateMyResume" customModuleProvider="target">
                                 <rect key="frame" x="30" y="224" width="315" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="regex" value="nonEmpty"/>
+                                </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Percentage/CGPA" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cfi-IX-Rvc">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Percentage/CGPA" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cfi-IX-Rvc" customClass="ValidatorTextField" customModule="CreateMyResume" customModuleProvider="target">
                                 <rect key="frame" x="30" y="278" width="315" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="regex" value="nonEmpty"/>
+                                </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MiJ-gd-Wkj">
                                 <rect key="frame" x="50" y="342" width="275" height="40"/>
@@ -1544,6 +1585,9 @@ the specifics you wish to attain via professional work.</string>
                         <outlet property="classTextField" destination="KmA-Wc-GaP" id="jmZ-Te-zid"/>
                         <outlet property="passingYearTextField" destination="Qqk-0v-y4i" id="3up-2Q-VlR"/>
                         <outlet property="percentageTextField" destination="Cfi-IX-Rvc" id="vdK-7d-Y1d"/>
+                        <outletCollection property="validatorTextFields" destination="KmA-Wc-GaP" collectionClass="NSMutableArray" id="d9f-Ot-7SN"/>
+                        <outletCollection property="validatorTextFields" destination="Qqk-0v-y4i" collectionClass="NSMutableArray" id="eJ1-Vf-x6b"/>
+                        <outletCollection property="validatorTextFields" destination="Cfi-IX-Rvc" collectionClass="NSMutableArray" id="okx-Wv-3Hb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8xh-CA-v88" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1798,30 +1842,45 @@ the specifics you wish to attain via professional work.</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Project Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Unm-VX-mBR">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Project Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Unm-VX-mBR" customClass="ValidatorTextField" customModule="CreateMyResume" customModuleProvider="target">
                                 <rect key="frame" x="30" y="170" width="315" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="regex" value="nonEmpty"/>
+                                </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Team Size" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wYo-3I-npR">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Team Size" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wYo-3I-npR" customClass="ValidatorTextField" customModule="CreateMyResume" customModuleProvider="target">
                                 <rect key="frame" x="30" y="224" width="315" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="regex" value="nonEmpty"/>
+                                </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Project Summary" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h3u-gn-wnk">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Project Summary" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h3u-gn-wnk" customClass="ValidatorTextField" customModule="CreateMyResume" customModuleProvider="target">
                                 <rect key="frame" x="30" y="278" width="315" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="regex" value="nonEmpty"/>
+                                </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Technology used" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TNd-eI-qCu">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Technology used" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TNd-eI-qCu" customClass="ValidatorTextField" customModule="CreateMyResume" customModuleProvider="target">
                                 <rect key="frame" x="30" y="332" width="315" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="regex" value="nonEmpty"/>
+                                </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Role" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sga-rR-cbg">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Role" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sga-rR-cbg" customClass="ValidatorTextField" customModule="CreateMyResume" customModuleProvider="target">
                                 <rect key="frame" x="30" y="386" width="315" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="regex" value="nonEmpty"/>
+                                </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xwE-Ns-obk">
                                 <rect key="frame" x="50" y="450" width="275" height="40"/>
@@ -1883,6 +1942,11 @@ the specifics you wish to attain via professional work.</string>
                         <outlet property="summaryTextField" destination="h3u-gn-wnk" id="l93-4W-Xhb"/>
                         <outlet property="teamSizeTextField" destination="wYo-3I-npR" id="u3b-QU-boG"/>
                         <outlet property="techUsedTextField" destination="TNd-eI-qCu" id="0GJ-gx-eMA"/>
+                        <outletCollection property="validatorTextFields" destination="Unm-VX-mBR" collectionClass="NSMutableArray" id="XGn-rB-UJ2"/>
+                        <outletCollection property="validatorTextFields" destination="wYo-3I-npR" collectionClass="NSMutableArray" id="zSh-tC-ye0"/>
+                        <outletCollection property="validatorTextFields" destination="h3u-gn-wnk" collectionClass="NSMutableArray" id="zuU-4a-thV"/>
+                        <outletCollection property="validatorTextFields" destination="TNd-eI-qCu" collectionClass="NSMutableArray" id="dPK-q8-ZJ7"/>
+                        <outletCollection property="validatorTextFields" destination="Sga-rR-cbg" collectionClass="NSMutableArray" id="zKy-mo-5Ge"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="guW-PB-ys9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1950,6 +2014,59 @@ the specifics you wish to attain via professional work.</string>
             <point key="canvasLocation" x="-1180" y="733"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="4RU-cv-6os">
+            <size key="intrinsicContentSize" width="97" height="34"/>
+        </designable>
+        <designable name="7ol-17-lxn">
+            <size key="intrinsicContentSize" width="62.5" height="34"/>
+        </designable>
+        <designable name="Cfi-IX-Rvc">
+            <size key="intrinsicContentSize" width="143.5" height="34"/>
+        </designable>
+        <designable name="KmA-Wc-GaP">
+            <size key="intrinsicContentSize" width="190.5" height="34"/>
+        </designable>
+        <designable name="Qdw-lc-tf3">
+            <size key="intrinsicContentSize" width="98" height="34"/>
+        </designable>
+        <designable name="Qqk-0v-y4i">
+            <size key="intrinsicContentSize" width="110" height="34"/>
+        </designable>
+        <designable name="SG7-pR-ye7">
+            <size key="intrinsicContentSize" width="83.5" height="34"/>
+        </designable>
+        <designable name="Sga-rR-cbg">
+            <size key="intrinsicContentSize" width="56.5" height="34"/>
+        </designable>
+        <designable name="TNd-eI-qCu">
+            <size key="intrinsicContentSize" width="138" height="34"/>
+        </designable>
+        <designable name="Unm-VX-mBR">
+            <size key="intrinsicContentSize" width="115.5" height="34"/>
+        </designable>
+        <designable name="Uzx-Vn-Fkx">
+            <size key="intrinsicContentSize" width="139.5" height="34"/>
+        </designable>
+        <designable name="gCK-Pu-hP5">
+            <size key="intrinsicContentSize" width="122.5" height="34"/>
+        </designable>
+        <designable name="h3u-gn-wnk">
+            <size key="intrinsicContentSize" width="139" height="34"/>
+        </designable>
+        <designable name="lrI-DW-mwu">
+            <size key="intrinsicContentSize" width="69" height="34"/>
+        </designable>
+        <designable name="san-Gh-jU1">
+            <size key="intrinsicContentSize" width="155.5" height="34"/>
+        </designable>
+        <designable name="wYo-3I-npR">
+            <size key="intrinsicContentSize" width="94" height="34"/>
+        </designable>
+        <designable name="ztr-fl-Whj">
+            <size key="intrinsicContentSize" width="135" height="34"/>
+        </designable>
+    </designables>
     <inferredMetricsTieBreakers>
         <segue reference="r1F-Ji-z80"/>
     </inferredMetricsTieBreakers>

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ResumeViewController: UIViewController {
+class ResumeViewController: BaseViewController {
     
     @IBOutlet private weak var tableView: UITableView!
     

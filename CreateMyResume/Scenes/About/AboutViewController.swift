@@ -11,11 +11,11 @@ protocol NextActionProtocol: AnyObject {
     func performNext(identifier: String)
 }
 
-class AboutViewController: UIViewController {
+class AboutViewController: BaseViewController {
     
     @IBOutlet private weak var userImageButton: UIButton!
-    @IBOutlet private weak var firstNameTextField: UITextField!
-    @IBOutlet private weak var lastNameTextField: UITextField!
+    @IBOutlet private weak var firstNameTextField: ValidatorTextField!
+    @IBOutlet private weak var lastNameTextField: ValidatorTextField!
     
     weak var delegate: NextActionProtocol?
     var imagePicker: ImagePicker!
@@ -45,6 +45,8 @@ class AboutViewController: UIViewController {
     }
     
     @IBAction private func nextButtonTapped(_ sender: UIButton) {
+        guard isFormValid else { return }
+        
         viewModel.contentModel.firstName = firstNameTextField.text ?? ""
         viewModel.contentModel.lastName = lastNameTextField.text ?? ""
         delegate?.performNext(identifier: ContentsViewModel.SegueIdentifier.contact.rawValue)

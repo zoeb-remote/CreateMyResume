@@ -7,11 +7,11 @@
 
 import UIKit
 
-class ContactViewController: UIViewController {
+class ContactViewController: BaseViewController {
     
-    @IBOutlet private weak var phoneTextField: UITextField!
-    @IBOutlet private weak var emailTextField: UITextField!
-    @IBOutlet private weak var addressTextField: UITextField!
+    @IBOutlet private weak var phoneTextField: ValidatorTextField!
+    @IBOutlet private weak var emailTextField: ValidatorTextField!
+    @IBOutlet private weak var addressTextField: ValidatorTextField!
     
     weak var delegate: NextActionProtocol?
     
@@ -27,6 +27,8 @@ class ContactViewController: UIViewController {
     }
     
     @IBAction private func nextButtonTapped(_ sender: UIButton) {
+        guard isFormValid else { return }
+        
         viewModel.contentModel.mobile = phoneTextField.text ?? ""
         viewModel.contentModel.email = emailTextField.text ?? ""
         viewModel.contentModel.address = addressTextField.text ?? ""

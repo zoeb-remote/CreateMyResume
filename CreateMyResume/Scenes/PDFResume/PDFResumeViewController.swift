@@ -8,7 +8,7 @@
 import UIKit
 import PDFGenerator
 
-class PDFResumeViewController: UIViewController {
+class PDFResumeViewController: BaseViewController {
     
     @IBOutlet private weak var contentView: UIView!
     @IBOutlet private weak var imageView: UIImageView!

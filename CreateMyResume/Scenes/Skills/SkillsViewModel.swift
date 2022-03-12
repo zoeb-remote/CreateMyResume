@@ -16,6 +16,7 @@ class SkillsViewModel {
     enum Constants {
         static let cellHeight: CGFloat = 90
         static let cellIdentifier = "SkillsTableViewCellIdentifier"
+        static let emptySkillMessage = "Enter Skill first"
     }
     var contentModel: SkillContentModel
     

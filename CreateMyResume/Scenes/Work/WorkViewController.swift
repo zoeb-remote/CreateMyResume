@@ -7,9 +7,9 @@
 
 import UIKit
 
-class WorkViewController: UIViewController {
+class WorkViewController: BaseViewController {
     
-    @IBOutlet private weak var totalExperienceTextField: UITextField!
+    @IBOutlet private weak var totalExperienceTextField: ValidatorTextField!
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var tableViewHeightLC: NSLayoutConstraint!
     
@@ -38,6 +38,8 @@ class WorkViewController: UIViewController {
     }
     
     @IBAction private func nextButtonTapped(_ sender: UIButton) {
+        guard isFormValid else { return }
+        
         viewModel.contentModel.totalExperience = totalExperienceTextField.text ?? ""
         delegate?.performNext(identifier: ContentsViewModel.SegueIdentifier.skills.rawValue)
     }

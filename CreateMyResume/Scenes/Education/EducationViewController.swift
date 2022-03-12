@@ -7,7 +7,7 @@
 
 import UIKit
 
-class EducationViewController: UIViewController {
+class EducationViewController: BaseViewController {
     
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var tableViewHeightLC: NSLayoutConstraint!
@@ -36,6 +36,8 @@ class EducationViewController: UIViewController {
     }
     
     @IBAction private func nextButtonTapped(_ sender: UIButton) {
+        guard isFormValid else { return }
+        
         delegate?.performNext(identifier: ContentsViewModel.SegueIdentifier.projectDetails.rawValue)
     }
     

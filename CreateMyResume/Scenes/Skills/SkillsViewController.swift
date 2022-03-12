@@ -7,9 +7,9 @@
 
 import UIKit
 
-class SkillsViewController: UIViewController {
+class SkillsViewController: BaseViewController {
     
-    @IBOutlet private weak var skillsTextField: UITextField!
+    @IBOutlet private weak var skillsTextField: ValidatorTextField!
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var tableViewHeightLC: NSLayoutConstraint!
     
@@ -25,6 +25,8 @@ class SkillsViewController: UIViewController {
     }
     
     @IBAction private func nextButtonTapped(_ sender: UIButton) {
+        guard isFormValid else { return }
+        
         delegate?.performNext(identifier: ContentsViewModel.SegueIdentifier.education.rawValue)
     }
     
@@ -32,6 +34,9 @@ class SkillsViewController: UIViewController {
         if let skill = skillsTextField.text, skill.isEmpty == false {
             didAddSkill(skill)
             skillsTextField.text = ""
+        } else {
+            showAlert(message: SkillsViewModel.Constants.emptySkillMessage)
+            skillsTextField.becomeFirstResponder()
         }
     }
     
